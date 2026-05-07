@@ -32,8 +32,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "HOME", path: "/", icon: IoHomeOutline },
     { name: "ABOUT", path: "/about", icon: HiOutlineUser },
-    { name: "WORKS", path: "/works", icon: FaDatabase },
-    { name: "PROJECTS", path: "/projects", icon: IoHomeOutline },
+    { name: "PROJECTS", path: "/projects", icon: FaDatabase },
   ];
 
   return (

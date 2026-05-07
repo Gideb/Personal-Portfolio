@@ -1,6 +1,6 @@
 import React from "react";
-import HeroSection from "../components/sections/homepage/herosection/HeroSection";
-import ProjectHighlight from "../components/sections/homepage/projecthighlight/ProjectHighlight";
+import HeroSection from "../components/sections/homepage/HeroSection";
+import ProjectHighlight from "../components/sections/homepage/FeaturedProjects.jsx";
 
 const Home = () => {
   return (
