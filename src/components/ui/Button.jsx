@@ -9,7 +9,7 @@ const Button = ({ path, buttonText, icon: Icon, variant = "primary" }) => {
     secondary:
       " text-white bg-linear-to-r from-teal-700 via-amber-300 to-emerald-700",
 
-    primary: "text-purple-700 bg-white border",
+    primary: "text-teal-700 bg-white border",
   };
 
   return (

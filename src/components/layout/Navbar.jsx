@@ -11,23 +11,19 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
- 
-
   useEffect(() => {
     const changeHeaderBg = () => {
       setScrolled(window.scrollY >= 50);
     };
 
     window.addEventListener("scroll", changeHeaderBg);
-
     return () => window.removeEventListener("scroll", changeHeaderBg);
   }, []);
 
-/* prevent bg scroll when menu is opened */
- useEffect(() => {
+  // Prevent background scroll when menu is open
+  useEffect(() => {
     document.body.style.overflow = openMenu ? "hidden" : "auto";
   }, [openMenu]);
-
 
   const navLinks = [
     { name: "HOME", path: "/", icon: IoHomeOutline },
@@ -38,11 +34,12 @@ const Navbar = () => {
   return (
     <>
       <nav
-        id={`fixed top-0 left-0 z-100 ${scrolled ? "bg-white shadow-md py-7" : "bg-transparent py-15"} `}
+        id="hero"
+        className={`fixed top-0 left-0 z-100 w-full transition-all duration-300 ${scrolled ? "bg-white shadow-md py-4" : "bg-transparent py-8"}`}
       >
-        <div className="mx-w-7xl flex items-center justify-between mx-auto px-6 pt-3">
+        <div className="max-w-7xl flex items-center justify-between mx-auto px-6 pt-3 lg:pt-7">
           <Link to="/">
-            <img src={image} alt="portfolio logo" className="w-20 " />
+            <img src={image} alt="portfolio logo" className="w-16 " />
           </Link>
 
           {/* desktop navLinks */}
@@ -63,7 +60,7 @@ const Navbar = () => {
           {/* desktop contact button */}
           <Link
             to="/contact"
-            className="invisible md:visible hover:scale-105 font-semibold group flex gap-3 items-center px-5 py-3  bg-amber-400 transition-all duration-300"
+            className="invisible md:visible hover:scale-105 font-semibold group flex gap-3 items-center px-5 py-3 text-gray-800 bg-teal-400 transition-all duration-300"
           >
             Get a Quote
             <FaPenToSquare className="text-md group-hover:translate-x-1 transition" />
@@ -75,9 +72,9 @@ const Navbar = () => {
             className={`cursor-pointer flex flex-col gap-1 md:hidden hover:opacity-85 transition duration-300 `}
             onClick={() => setOpenMenu(true)}
           >
-            <span className="w-5 h-1 bg-amber-200"></span>
-            <span className="w-3 h-1 bg-gray-200"></span>
-            <span className="w-6 h-1 bg-amber-200"></span>
+            <span className="w-5 h-1 bg-teal-700"></span>
+            <span className="w-3 h-1 bg-gray-600"></span>
+            <span className="w-6 h-1 bg-teal-700"></span>
           </button>
         </div>
       </nav>
@@ -95,7 +92,7 @@ const Navbar = () => {
         <div className="flex h-full flex-col p-10">
           {/* close buton */}
           <button
-            className="px-3  bg-amber-400 cursor-pointer self-end text-gray-300 font-semibold text-3xl transition hover:text-gray-400 "
+            className="px-3  bg-teal-600 rounded cursor-pointer self-end text-gray-300 font-semibold text-3xl transition hover:text-gray-400 "
             onClick={() => setOpenMenu(false)}
           >
             x
@@ -105,7 +102,7 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <div key={index}>
                 <Link
-                  className="flex gap-3 items-center"
+                  className="flex gap-3 items-center text-gray-200"
                   to={link.path}
                   onClick={() => setOpenMenu(false)}
                 >
@@ -120,7 +117,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="absolute bottom-20 ml-10 hover:scale-105 font-semibold group flex gap-3 items-center justify-center px-5 py-3  bg-amber-400 transition-all duration-300"
+            className="absolute bottom-20 ml-10 hover:scale-105 font-semibold group flex gap-3 items-center justify-center px-5 py-3 text-gray-800  bg-teal-400 transition-all duration-300"
           >
             Get a Quote
             <FaPenToSquare className="text-md group-hover:translate-x-1 transition" />
