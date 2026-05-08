@@ -5,17 +5,12 @@ import Topic from "../../Props/Topic";
 import Heading from "../../Props/Heading";
 import Subheading from "../../Props/Subheading";
 import { BsJavascript } from "react-icons/bs";
-import { FaCss3Alt, FaNodeJs, FaReact } from "react-icons/fa6";
+import { FaCss3Alt, FaNodeJs, FaPhp, FaReact } from "react-icons/fa6";
 import { TbBrandTypescript } from "react-icons/tb";
 import { SiTailwindcss } from "react-icons/si";
 
 const SkillsPreview = () => {
   const skills = [
-    {
-      title: "Vanilla CSS",
-      description: "Modern layouts & animations",
-      icon: FaCss3Alt,
-    },
     {
       title: "Tailwind CSS",
       description: "Modern layouts & animations",
@@ -36,6 +31,11 @@ const SkillsPreview = () => {
       title: "Node.js",
       description: "Rest API's, Authentication",
       icon: FaNodeJs,
+    },
+    {
+      title: "PHP",
+      description: "Solid Work",
+      icon: FaPhp,
     },
   ];
 
