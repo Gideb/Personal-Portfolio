@@ -2,11 +2,11 @@
 
 :root {
 
-    --Text: #F9F6F0;
+    --Background: #F9F6F0;
     --PrimaryColor: #2A9D8F;
     --SecondaryColor: #FF6B6B;
     --AccentColor: #8D8D8D;
-    --Background: #2C2C2C;
+    --Text: #2C2C2C;
     --navy: #000080;
 }
 
