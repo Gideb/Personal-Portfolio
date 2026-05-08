@@ -1,9 +1,73 @@
-import React from 'react'
+import React from "react";
+import { FaLinkedin } from "react-icons/fa";
+import { FaDatabase, FaGithub } from "react-icons/fa6";
+import { HiOutlineEnvelope, HiOutlineUser } from "react-icons/hi2";
+import { IoHomeOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
+  const navLinks = [
+    { name: "HOME", path: "/" },
+    { name: "ABOUT", path: "/about" },
+    { name: "PROJECTS", path: "/projects" },
+  ];
 
-export default Footer
+  return (
+    <section className="border py-10 bg-white ">
+      <div className="max-w-7xl mx-auto text-center py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-col gap-7 text-left">
+            <h2 className="text-3xl text-gray-900">Gideb.dev</h2>
+            <p className="text-left text-gray-500 text-sm">
+              Software Engineer building clean, user-focused web experiences.
+            </p>
+          </div>
+
+          {/* quick links */}
+          <div className="flex flex-col gap-6 lg:ml-30 ">
+            <h3 className="text-md text-gray-700 text-left">NAVIGATION</h3>
+
+            <div>
+              {navLinks.map((navLink) => (
+                <div
+                  className="relative py-1 text-left font-semibold "
+                  key={navLink.name}
+                >
+                  <Link
+                    to={navLink.path}
+                    className="text-gray-700 hover:text-teal-800 transition-colors text-sm group flex items-center gap-2"
+                  >
+                    <span className="w-0 group-hover:w-2 h-px bg-teal-800 transition-all duration-300" />
+                    {navLink.name}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* social links */}
+
+          <div className="flex items-center justify-center gap-3">
+            <Link to="/github/gideb" className="p-3 bg-slate-200 rounded-full">
+              <FaGithub className="text-xl text-slate-900 " />
+            </Link>
+            <Link
+              to="/linkedin/gideb"
+              className="p-3 bg-slate-200 rounded-full"
+            >
+              <FaLinkedin className="text-xl text-slate-900 " />
+            </Link>
+            <Link
+              to="/hello@gidev.dev"
+              className="p-3 bg-slate-200 rounded-full"
+            >
+              <HiOutlineEnvelope className="text-xl text-slate-900 " />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Footer;

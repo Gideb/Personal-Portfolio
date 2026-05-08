@@ -7,7 +7,7 @@ const Topic = ({ topic, icon: Icon, variant = "noBg" }) => {
   };
 
   const base =
-    "inline-flex justify-center items-center gap-2 h-7 uppercase tracking-none rounded-xl";
+    "inline-flex justify-center items-center gap-2 h-7 uppercase tracking-none rounded-xl mb-4";
 
   const color = "text-emerald-700";
 

@@ -19,7 +19,7 @@ const FeaturedProjects = () => {
             to="/projects"
             className="flex items-center justify-between hover:text-teal-700"
           >
-            <Heading
+            <Heading leftAlign
               title="Featured Projects"
               className="hover:text-teal-700"
             />
@@ -30,7 +30,7 @@ const FeaturedProjects = () => {
             </div>
           </Link>
 
-          <Subheading description="A glimpse of what we've created for our clients. Each project represents our commitment to excellence." />
+          <Subheading leftAlign description="A glimpse of what we've created for our clients. Each project represents our commitment to excellence." />
         </div>
 
         {/* featured projects */}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import image from "../../assets/images/logo.png";
 import { IoHomeOutline } from "react-icons/io5";
 import { HiOutlineUser } from "react-icons/hi";
@@ -47,12 +47,15 @@ const Navbar = () => {
           <div className="space-x-8 hidden md:flex">
             {navLinks.map((link) => (
               <div className="relative py-2" key={link.name}>
-                <Link
-                  className="flex items-center gap-1 font-medium hover:text-gray-300"
+                <NavLink
                   to={link.path}
+                  className={({ isActive }) =>
+                    `flex items-center gap-1 font-medium hover:text-gray-300 ${isActive ? " font-semibold text-teal-700" : "text-gray-700 hover:text-teal-500"}`
+                  }
+                  end={link.path === "/"}
                 >
                   {link.name}
-                </Link>
+                </NavLink>
               </div>
             ))}
           </div>
@@ -101,14 +104,17 @@ const Navbar = () => {
           <div className="flex flex-col text-lg gap-6 mt-20 ml-10">
             {navLinks.map((link, index) => (
               <div key={index}>
-                <Link
-                  className="flex gap-3 items-center text-gray-200"
+                <NavLink
                   to={link.path}
+                  className={({ isActive }) =>
+                    `flex gap-3 items-center ${isActive ? "text-teal-300 font-semibold" : "text-gray-200 hover:text-teal-200"}`
+                  }
                   onClick={() => setOpenMenu(false)}
+                  end={link.path === "/"}
                 >
                   <link.icon className="text-xl" />
                   {link.name}
-                </Link>
+                </NavLink>
               </div>
             ))}
           </div>

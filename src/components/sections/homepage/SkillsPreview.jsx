@@ -45,8 +45,8 @@ const SkillsPreview = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left mb-16">
           <Topic topic="toolkit" />
-          <Heading title="Daily Skills Toolkit" />
-          <Subheading description="Tools I work with daily" />
+          <Heading leftAlign title="Daily Skills Toolkit" />
+          <Subheading leftAlign description="Tools I work with daily" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
