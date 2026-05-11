@@ -1,8 +1,8 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
-import { FaDatabase, FaGithub } from "react-icons/fa6";
-import { HiOutlineEnvelope, HiOutlineUser } from "react-icons/hi2";
-import { IoHomeOutline } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa6";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -14,8 +14,8 @@ const Footer = () => {
 
   return (
     <section className="border py-10 bg-white ">
-      <div className="max-w-7xl mx-auto text-center py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-7xl mx-auto text-center py-10 px-4 lg:px-7">
+        <div className="grid grid-cols-1 md:grid-cols-3 ">
           <div className="flex flex-col gap-7 text-left">
             <h2 className="text-3xl text-gray-900">Gideb.dev</h2>
             <p className="text-left text-gray-500 text-sm">
@@ -47,23 +47,35 @@ const Footer = () => {
 
           {/* social links */}
 
-          <div className="flex items-center justify-center gap-3">
-            <Link to="/github/gideb" className="p-3 bg-slate-200 rounded-full">
-              <FaGithub className="text-xl text-slate-900 " />
-            </Link>
-            <Link
-              to="/linkedin/gideb"
-              className="p-3 bg-slate-200 rounded-full"
-            >
-              <FaLinkedin className="text-xl text-slate-900 " />
-            </Link>
-            <Link
-              to="/hello@gidev.dev"
-              className="p-3 bg-slate-200 rounded-full"
-            >
-              <HiOutlineEnvelope className="text-xl text-slate-900 " />
-            </Link>
+          <div className="flex flex-col gap-6 lg:ml-30 my-4">
+            <h3 className="text-md text-gray-700 text-left">CONNECT</h3>
+            <div className="flex items-center text-left gap-3 ">
+              <Link
+                to="/github/gideb"
+                className="p-3 bg-emerald-100 hover:bg-emerald-300 transition-all duration-500 rounded-full"
+              >
+                <FaGithub className="text-xl text-slate-900 " />
+              </Link>
+              <Link
+                to="/linkedin/gideb"
+                className="p-3 bg-emerald-100 hover:bg-emerald-300 transition-all duration-500 rounded-full"
+              >
+                <FaLinkedin className="text-xl text-slate-900 " />
+              </Link>
+              <Link
+                to="/hello@gidev.dev"
+                className="p-3 bg-emerald-100 hover:bg-emerald-300 transition-all duration-500 rounded-full "
+              >
+                <HiOutlineEnvelope className="text-xl text-slate-900 " />
+              </Link>
+            </div>
           </div>
+        </div>
+
+
+        <div className="h-4 w-full z-20 text-gray-700 my-2"></div>
+        <div>
+          <h4 className="text-left">&copy;copyright GIDEB.DEV {new Date().getFullYear()}</h4>
         </div>
       </div>
     </section>

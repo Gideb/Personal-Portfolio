@@ -13,7 +13,7 @@ const HeroSection = () => {
       className="scroll-mt-16 relative mt-10 sm:mt-5  w-full overflow-hidden bg-[#F9F6F0] py-8 sm:py-8 lg:py-22 "
       aria-label="Hero section"
     >
-      <div className="z-10 mt-10  sm:px-4 lg:px-7 max-w-7xl mx-auto py-10 items-center my-5 px-4 space-y-10 flex">
+      <div className="z-10 mt-10 px-4 lg:px-7 max-w-7xl mx-auto py-10 items-center my-5 space-y-10 flex">
         <div className="space-y-5 ">
           <Topic
             icon={HiOutlineSparkles}
@@ -29,6 +29,7 @@ const HeroSection = () => {
             . I Build Clean Web Experiences.
           </h2>
           <Subheading
+            leftAlign
             description="Front-end developer crafting fast, accessible, user-foccused
             interfaces with TypeScript, JavaScript, React and CSS."
           />
