@@ -1,8 +1,13 @@
 import React from 'react'
+import AboutMe from '../components/sections/aboutpage/AboutMe';
+import SkillJourney from '../components/sections/aboutpage/SkillJourney';
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <AboutMe />
+      <SkillJourney />
+    </div>
   )
 }
 
