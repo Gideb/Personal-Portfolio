@@ -8,10 +8,12 @@ const Card = ({ key, title, icon: Icon, description, color, platform }) => {
     indigo: {
       bg: "bg-indigo-100",
       text: "text-indigo-600",
+      border: "border-indigo-300",
     },
     amber: {
       bg: "bg-amber-100",
       text: "text-amber-600",
+      border: "border-amber-300",
     },
     teal: {
       bg: "bg-teal-100",
@@ -22,13 +24,19 @@ const Card = ({ key, title, icon: Icon, description, color, platform }) => {
     rose: {
       bg: "bg-rose-100",
       text: "text-rose-600",
+      border: "border-rose-300",
     },
 
     purple: {
       bg: "bg-purple-100",
       text: "text-purple-600",
+      border: "border-purple-300",
     },
-    
+    pink: {
+      bg: "bg-pink-100",
+      text: "text-pink-600",
+      border: "border-pink-300",
+    },
   };
 
   const selectedColor = colorClasses[color] || colorClasses.emerald;

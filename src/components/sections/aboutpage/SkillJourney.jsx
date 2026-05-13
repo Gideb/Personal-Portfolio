@@ -3,14 +3,23 @@ import Topic from "../../Props/Topic";
 import Heading from "../../Props/Heading";
 import Subheading from "../../Props/Subheading";
 import Card from "../../ui/Card";
-import { LuBrain, LuCode, LuPenTool, LuRabbit, LuRocket } from "react-icons/lu";
+import {
+  LuBrain,
+  LuCode,
+  LuCodeXml,
+  LuPenTool,
+  LuRabbit,
+  LuRocket,
+} from "react-icons/lu";
 import { BiMobileAlt } from "react-icons/bi";
+import { FaMobileButton } from "react-icons/fa6";
 
 const SkillJourney = () => {
   const skillSet = [
     {
       title: "Frontend",
       icon: LuPenTool,
+      color: "rose",
       tools: [
         "HTML5",
         "CSS3 / Tailwind",
@@ -24,6 +33,7 @@ const SkillJourney = () => {
     {
       title: "Backend",
       icon: LuBrain,
+      color: "amber",
       tools: [
         "Next.js",
         "Testing (Vitest)",
@@ -35,6 +45,7 @@ const SkillJourney = () => {
     {
       title: "Mobile App Development",
       icon: BiMobileAlt,
+      color: "teal",
       tools: ["Flutter", "React Native", "Kotlin", "Firebase", "GraphQL"],
     },
   ];
@@ -43,7 +54,7 @@ const SkillJourney = () => {
     {
       id: 1,
       year: "2026",
-      icon: LuRocket,
+      icon: FaMobileButton,
       color: "bg-teal-900",
       title: "Mobile Application Development",
       description:
@@ -61,7 +72,7 @@ const SkillJourney = () => {
     {
       id: 3,
       year: "2024",
-      icon: LuRabbit,
+      icon: LuBrain,
       color: "bg-teal-700",
       title: "Building Real Projects",
       description:
@@ -70,7 +81,7 @@ const SkillJourney = () => {
     {
       id: 4,
       year: "2023",
-      icon: LuRabbit,
+      icon: LuPenTool,
       color: "bg-teal-600",
       title: "Deep dive into Frontend Development",
       description:
@@ -79,8 +90,8 @@ const SkillJourney = () => {
     {
       id: 5,
       year: "2022",
-      icon: LuCode,
-      color: "bg-teal-500",
+      icon: LuCodeXml,
+      color: "bg-teal-600",
       title: "Fundamentals of Web Development",
       description:
         "HTML, CSS, JavaScript — the foundation everything builds on.",
@@ -108,7 +119,7 @@ const SkillJourney = () => {
                 title={skill.title}
                 icon={skill.icon}
                 description={skill.tools.map((tool) => `• ${tool}`).join(" \n")}
-                color="teal"
+                color={`${skill.color}`}
               />
             ))}
           </div>
@@ -134,16 +145,22 @@ const SkillJourney = () => {
               return (
                 <div
                   key={index}
-                  className="lg:ml-20  flex gap-5 text-left self-start"
+                  className="lg:ml-20  flex gap-5 text-left self-start "
                 >
                   <div
-                    className={`w-14 h-14 flex items-center justify-center rounded-full ${step.color} bg-teal-100`}
+                    className={`w-14 h-14 flex items-center relative z-50  justify-center rounded-full ${step.color} bg-teal-100 group`}
                   >
-                    <Icon className="text-white text-2xl" />
+                    <div className="w-0.5 h-25 bg-teal-900 absolute lg:top-14 lg:left-7 z-0" />
+                    <Icon className="text-white text-2xl z-50 group-hover:text-3xl transition-all duration-300 ease-out" />
                   </div>
 
                   <div className="flex flex-col text-left gap-2">
-                    <span className="text-teal-700">{step.year}</span>
+                    <div className="w-13 h-6 bg-teal-100">
+                      <span className="text-teal-700 pl-2 font-semibold ">
+                        {step.year}
+                      </span>
+                    </div>
+
                     <span className="font-semibold text-xl">{step.title}</span>
                     <span className=" text-xs">{step.description}</span>
                   </div>
