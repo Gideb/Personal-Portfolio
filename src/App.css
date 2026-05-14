@@ -15,3 +15,22 @@ body {
     color: var(--Text);
     font-family: "montserrat", "inter";
 }
+
+
+.animate-diamond {
+    animation: diamond 5s ease-in-out infinite;
+}
+
+@keyframes diamond {
+
+    0%,
+    100% {
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+
+}

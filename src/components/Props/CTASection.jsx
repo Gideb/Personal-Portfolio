@@ -28,7 +28,7 @@ const CTASection = () => {
             <Button
               buttonText="Github"
               icon={FaGithub}
-              path="/contact"
+              path="https://github/gideb"
               variant="primary"
             />
           </div>
