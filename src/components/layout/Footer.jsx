@@ -13,7 +13,7 @@ const Footer = () => {
   ];
 
   return (
-    <section className="border py-10 bg-white ">
+    <section className="border-t border-slate-200 py-10 bg-white ">
       <div className="max-w-7xl mx-auto text-center py-10 px-4 lg:px-7">
         <div className="grid grid-cols-1 md:grid-cols-3 ">
           <div className="flex flex-col gap-7 text-left">

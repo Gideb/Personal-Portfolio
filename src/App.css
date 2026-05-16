@@ -2,7 +2,7 @@
 
 :root {
 
-    --Background: #ffffff;
+    --Background: #fffeff;
     --PrimaryColor: #2A9D8F;
     --SecondaryColor: #FF6B6B;
     --AccentColor: #8D8D8D;
@@ -18,7 +18,7 @@ body {
 
 
 .animate-diamond {
-    animation: diamond 5s ease-in-out infinite;
+    animation: diamond 8s ease-in-out infinite;
 }
 
 @keyframes diamond {

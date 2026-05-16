@@ -16,6 +16,7 @@ const projects = [
     description:
       "A full-stack dashboard that aggregates and visualizes social media metrics from multiple platforms in one place.",
     image: socialMedia,
+    type: "Full Stack",
     tech: [
       "MongoDB",
       "Express",
@@ -58,6 +59,7 @@ const projects = [
     description:
       "A real-time weather dashboard that displays current conditions and 5-day forecasts for any city worldwide.",
     image: weatherApp,
+    type: "Frontend",
     tech: ["React", "OpenWeather API", "Axios", "CSS Modules"],
     overview:
       "This web app fetches live weather data from the OpenWeather API and presents it in an intuitive dashboard with dynamic icons, temperature toggles (°C/°F), and search history.",
@@ -88,6 +90,7 @@ const projects = [
     description:
       "A reusable component library with buttons, modals, forms, and cards, built as a living style guide.",
     image: uiDesign,
+    type: "Frontend",
     tech: ["React", "Storybook", "Styled Components", "TypeScript"],
     overview:
       "This project is a production-ready component library designed for consistency across applications. It includes dark mode support, accessibility features, and full documentation.",
@@ -118,6 +121,7 @@ const projects = [
     description:
       "A RESTful backend for managing personal finances with user authentication, income/expense tracking, and spending analytics.",
     image: expenseTracker,
+    type: "Backend",
     tech: ["Node.js", "Express", "MongoDB", "JWT", "Mongoose"],
     overview:
       "This API allows users to register, log in, add transactions (income/expense), categorize them, and retrieve summaries like monthly spending or budget vs. actual reports.",
@@ -149,6 +153,7 @@ const projects = [
     description:
       "A full-stack MERN application where users can create, edit, organize, and share notes with others in real-time.",
     image: notesApp,
+    type: "Full Stack",
     tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "Tailwind"],
     overview:
       "This is a complete note-taking platform with markdown support, tags, search, and real-time collaboration. Users can share notes with view or edit permissions.",
@@ -181,6 +186,7 @@ const projects = [
     description:
       "A cross-platform mobile app for managing daily tasks with reminders, categories, and offline support.",
     image: taskManager,
+    type: "Mobile",
     tech: [
       "React Native",
       "Expo",
@@ -219,6 +225,7 @@ const projects = [
     description:
       "A full-stack mobile app that logs workouts, tracks progress with charts, and provides personalized exercise recommendations.",
     image: fitnessTracker,
+    type: "Mobile + Backend",
     tech: [
       "React Native",
       "Node.js",
@@ -257,7 +264,9 @@ const projects = [
     title: "E-Commerce Product Page",
     description:
       "A fully responsive product page with image gallery, variant selection, cart management, and local storage persistence.",
+
     image: ecommmerce,
+    type: "Frontend",
     tech: ["React", "Context API", "Tailwind CSS", "Framer Motion"],
     overview:
       "This UI component simulates an e-commerce product page, featuring a lightbox gallery, size/color pickers, quantity selector, and a mini-cart with add/remove functionality.",
@@ -266,8 +275,7 @@ const projects = [
     solution:
       "I built a React app with Context API for global cart state. The gallery includes thumbnail navigation and a lightbox modal. Cart data persists in localStorage so items survive page refresh.",
     features: [
-      "Product image gallery with lightbox modal",
-      "Thumbnail carousel",
+      "Product image gallery with lightbox modal","Thumbnail carousel",
       "Variant selection (size, color) with stock validation",
       "Quantity selector with min/max limits",
       "Add to cart with micro-interactions (framer motion)",
@@ -291,6 +299,7 @@ const projects = [
     description:
       "A scalable URL shortening service with custom aliases, click tracking, analytics, and expiration dates.",
     image: urlShortener,
+    type: "Backend",
     tech: ["Node.js", "Express", "PostgreSQL", "Redis", "JWT"],
     overview:
       "This backend service converts long URLs into short codes, redirects users, and tracks clicks (referrer, geolocation, device type). It supports user accounts, custom slugs, and link expiration.",
