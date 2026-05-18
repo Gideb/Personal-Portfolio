@@ -151,10 +151,10 @@ const CaseStudy = () => {
 
         {/* next project button  */}
         <Link
-          to="/projects"
+          to="/projects/next"
           className="flex items-center gap-2 hover:gap-3 text-gray-600 hover:text-gray-400 transition-all duration-300 text-xs my-15 justify-end"
         >
-          <span>All Projects</span>
+          <span>Next Project</span>
           <FaArrowRight />
         </Link>
 
