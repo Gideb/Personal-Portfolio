@@ -39,7 +39,7 @@ const Projects = () => {
           <div>
             <div className="flex gap-3 items-start my-10">
               {choices.map((choice) => (
-                <span className="px-4 py-2 rounded-3xl border border-zinc-500 hover:border-teal-700 text-slate-500 hover:text-teal-900 bg-gray-200 hover:bg-gray-100 transition-all ease duration-500 cursor-pointer">
+                <span className="px-4 py-2 rounded-3xl border border-zinc-500 hover:border-rose-700 text-slate-500 hover:text-rose-900 bg-gray-200 hover:bg-gray-100 transition-all ease duration-500 cursor-pointer">
                   {choice}
                 </span>
               ))}

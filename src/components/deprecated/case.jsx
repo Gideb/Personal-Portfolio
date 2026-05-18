@@ -22,7 +22,7 @@ const CaseStudy = () => {
           icon: FaChartLine,
           value: "+120%",
           label: "Traffic Increase",
-          color: "from-green-500 to-emerald-400",
+          color: "from-green-500 to-pink-400",
         },
         {
           icon: FaShoppingCart,
@@ -53,7 +53,7 @@ const CaseStudy = () => {
           icon: FaRocket,
           value: "99.9%",
           label: "Uptime Achieved",
-          color: "from-green-500 to-emerald-400",
+          color: "from-green-500 to-pink-400",
         },
         {
           icon: FaClock,
@@ -84,7 +84,7 @@ const CaseStudy = () => {
           icon: FaEye,
           value: "50K+",
           label: "Downloads (Month 1)",
-          color: "from-green-500 to-emerald-400",
+          color: "from-green-500 to-pink-400",
         },
         {
           icon: FaStar,

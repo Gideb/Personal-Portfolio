@@ -35,9 +35,9 @@ const Footer = () => {
                 >
                   <Link
                     to={navLink.path}
-                    className="text-gray-700 hover:text-teal-800 transition-colors text-sm group flex items-center gap-2"
+                    className="text-gray-700 hover:text-rose-800 transition-colors text-sm group flex items-center gap-2"
                   >
-                    <span className="w-0 group-hover:w-2 h-px bg-teal-800 transition-all duration-300" />
+                    <span className="w-0 group-hover:w-2 h-px bg-rose-800 transition-all duration-300" />
                     {navLink.name}
                   </Link>
                 </div>
@@ -52,19 +52,19 @@ const Footer = () => {
             <div className="flex items-center text-left gap-3 ">
               <Link
                 to="/github/gideb"
-                className="p-3 bg-emerald-100 hover:bg-emerald-300 transition-all duration-500 rounded-full"
+                className="p-3 bg-pink-100 hover:bg-pink-300 transition-all duration-500 rounded-full"
               >
                 <FaGithub className="text-xl text-slate-900 " />
               </Link>
               <Link
                 to="/linkedin/gideb"
-                className="p-3 bg-emerald-100 hover:bg-emerald-300 transition-all duration-500 rounded-full"
+                className="p-3 bg-pink-100 hover:bg-pink-300 transition-all duration-500 rounded-full"
               >
                 <FaLinkedin className="text-xl text-slate-900 " />
               </Link>
               <Link
                 to="/hello@gidev.dev"
-                className="p-3 bg-emerald-100 hover:bg-emerald-300 transition-all duration-500 rounded-full "
+                className="p-3 bg-pink-100 hover:bg-pink-300 transition-all duration-500 rounded-full "
               >
                 <HiOutlineEnvelope className="text-xl text-slate-900 " />
               </Link>
@@ -72,10 +72,11 @@ const Footer = () => {
           </div>
         </div>
 
-
         <div className="h-4 w-full z-20 text-gray-700 my-2"></div>
         <div>
-          <h4 className="text-left">&copy;copyright GIDEB.DEV {new Date().getFullYear()}</h4>
+          <h4 className="text-left">
+            &copy;copyright GIDEB.DEV {new Date().getFullYear()}
+          </h4>
         </div>
       </div>
     </section>

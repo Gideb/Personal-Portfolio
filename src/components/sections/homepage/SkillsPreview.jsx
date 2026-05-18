@@ -56,7 +56,7 @@ const SkillsPreview = () => {
               title={skill.title}
               icon={skill.icon}
               description={skill.description}
-              color="teal"
+              color="rose"
             />
           ))}
         </div>

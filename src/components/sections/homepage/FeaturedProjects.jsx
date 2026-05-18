@@ -17,11 +17,12 @@ const FeaturedProjects = () => {
 
           <Link
             to="/projects"
-            className="flex items-center justify-between hover:text-teal-700"
+            className="flex items-center justify-between hover:text-rose-700"
           >
-            <Heading leftAlign
+            <Heading
+              leftAlign
               title="Featured Projects"
-              className="hover:text-teal-700"
+              className="hover:text-rose-700"
             />
 
             <div className="flex gap-3 hover:gap-4 items-center ">
@@ -30,7 +31,10 @@ const FeaturedProjects = () => {
             </div>
           </Link>
 
-          <Subheading leftAlign description="A glimpse of what we've created for our clients. Each project represents our commitment to excellence." />
+          <Subheading
+            leftAlign
+            description="A glimpse of what we've created for our clients. Each project represents our commitment to excellence."
+          />
         </div>
 
         {/* featured projects */}

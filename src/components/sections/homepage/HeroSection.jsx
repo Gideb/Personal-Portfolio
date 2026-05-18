@@ -23,7 +23,7 @@ const HeroSection = () => {
 
           <h2 className="max-w-3xl text-4xl md:text-5xl lg:text-6xl font-black leading-tight ">
             Hi, I Am{" "}
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-teal-700 via-amber-300 to-emerald-700">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-rose-700 via-amber-300 to-pink-700">
               Gilbert
             </span>
             . I Build Clean Web Experiences.

@@ -2,14 +2,14 @@ import React from "react";
 
 const Topic = ({ topic, icon: Icon, variant = "noBg" }) => {
   const styles = {
-    bg: "bg-emerald-100 px-4 border border-emerald-300",
-    nobg: "bg-transparent text-teal-600",
+    bg: "bg-pink-100 px-4 border border-pink-300",
+    nobg: "bg-transparent text-rose-600",
   };
 
   const base =
     "inline-flex justify-center items-center gap-2 h-7 uppercase tracking-none rounded-xl mb-4";
 
-  const color = "text-emerald-700";
+  const color = "text-pink-700";
 
   return (
     <div className={`${base} ${styles[variant]}`}>

@@ -12,9 +12,10 @@ const AboutMe = () => {
 
           <h2 className="max-w-3xl text-4xl md:text-5xl lg:text-6xl font-black leading-none ">
             Curious developer with a love for the {""}
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-teal-700 via-amber-300 to-emerald-700">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-rose-700 via-amber-300 to-pink-700">
               web
-            </span>.
+            </span>
+            .
           </h2>
 
           <div className="space-y-6">

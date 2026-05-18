@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
           <div className="absolute inset-0 items-center justify-center opacity-0 transition-all group-hover:opacity-100 flex duration-500 ">
             <Link
               to={`/projects/${project.slug}`}
-              className="flex items-center text-white gap-2 bg-teal-600 p-4 shadow-lg transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 font-medium hover:bg-teal-800"
+              className="flex items-center text-white gap-2 bg-rose-600 p-4 shadow-lg transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 font-medium hover:bg-rose-800"
             >
               <FaEye />
               View Project
@@ -42,12 +42,12 @@ const ProjectCard = ({ project }) => {
         <div className=" space-y-4 bg-white p-6">
           <div className="flex items-center justify-between">
             {/* title */}
-            <h2 className="text-gray-800 text-md font-semibold group-hover:text-teal-700">
+            <h2 className="text-gray-800 text-md font-semibold group-hover:text-rose-700">
               {project.title}
             </h2>
 
             {/* icon */}
-            <BsArrowUpRightSquare className="text-md text-gray-500 group-hover:text-teal-700 group-hover:text-xl transition-all duration-500" />
+            <BsArrowUpRightSquare className="text-md text-gray-500 group-hover:text-rose-700 group-hover:text-xl transition-all duration-500" />
           </div>
 
           {/* description */}

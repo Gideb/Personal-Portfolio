@@ -1,9 +1,9 @@
 const Card = ({ key, title, icon: Icon, description, color, platform }) => {
   const colorClasses = {
-    emerald: {
-      bg: "bg-emerald-100",
-      text: "text-emerald-700",
-      border: "border-emerald-200",
+    pink: {
+      bg: "bg-pink-100",
+      text: "text-pink-700",
+      border: "border-pink-200",
     },
     indigo: {
       bg: "bg-indigo-100",
@@ -15,10 +15,10 @@ const Card = ({ key, title, icon: Icon, description, color, platform }) => {
       text: "text-amber-600",
       border: "border-amber-300",
     },
-    teal: {
-      bg: "bg-teal-100",
-      text: "text-teal-700",
-      border: "border-teal-100",
+    rose: {
+      bg: "bg-rose-100",
+      text: "text-rose-700",
+      border: "border-rose-100",
     },
 
     rose: {
@@ -39,7 +39,7 @@ const Card = ({ key, title, icon: Icon, description, color, platform }) => {
     },
   };
 
-  const selectedColor = colorClasses[color] || colorClasses.emerald;
+  const selectedColor = colorClasses[color] || colorClasses.pink;
 
   return (
     <div

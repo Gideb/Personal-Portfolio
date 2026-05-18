@@ -50,7 +50,7 @@ const Navbar = () => {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `flex items-center gap-1 font-medium hover:text-gray-300 ${isActive ? " font-semibold text-teal-700" : "text-gray-700 hover:text-teal-500"}`
+                    `flex items-center gap-1 font-medium hover:text-gray-300 ${isActive ? " font-semibold text-rose-700" : "text-gray-700 hover:text-rose-500"}`
                   }
                   end={link.path === "/"}
                 >
@@ -63,7 +63,7 @@ const Navbar = () => {
           {/* desktop contact button */}
           <Link
             to="/contact"
-            className="invisible md:visible hover:scale-105 font-semibold group flex gap-3 items-center px-5 py-3 text-gray-800 bg-teal-400 transition-all duration-300"
+            className="invisible md:visible hover:scale-105 font-semibold group flex gap-3 items-center px-5 py-3 bg-gray-300 text-rose-700 transition-all duration-300"
           >
             Get a Quote
             <FaPenToSquare className="text-md group-hover:translate-x-1 transition" />
@@ -75,9 +75,9 @@ const Navbar = () => {
             className={`cursor-pointer flex flex-col gap-1 md:hidden hover:opacity-85 transition duration-300 z-10 `}
             onClick={() => setOpenMenu(true)}
           >
-            <span className="w-5 h-1 bg-teal-700"></span>
+            <span className="w-5 h-1 bg-rose-700"></span>
             <span className="w-3 h-1 bg-gray-600"></span>
-            <span className="w-6 h-1 bg-teal-700"></span>
+            <span className="w-6 h-1 bg-rose-700"></span>
           </button>
         </div>
       </nav>
@@ -90,12 +90,12 @@ const Navbar = () => {
 
       {/* sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-90 bg-teal-800 z-100 transform transition-transform duration-400 ease-out border-l ${openMenu ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 h-full w-90 bg-rose-800 z-100 transform transition-transform duration-400 ease-out border-l ${openMenu ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex h-full flex-col p-10">
           {/* close buton */}
           <button
-            className="px-2  bg-teal-600 rounded shadow-xs shadow-white cursor-pointer self-end text-gray-200 font-semibold text-xl transition hover:text-gray-100 "
+            className="px-2  cursor-pointer self-end text-gray-200 font-semibold text-xl transition hover:text-gray-100 "
             onClick={() => setOpenMenu(false)}
           >
             x
@@ -107,7 +107,7 @@ const Navbar = () => {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `flex gap-3 items-center ${isActive ? "text-teal-300 font-semibold" : "text-gray-200 hover:text-teal-200"}`
+                    `flex gap-3 items-center ${isActive ? "text-rose-200 font-semibold" : "text-gray-100 hover:text-rose-300"}`
                   }
                   onClick={() => setOpenMenu(false)}
                   end={link.path === "/"}
@@ -123,7 +123,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="absolute bottom-20 ml-10 hover:scale-105 font-semibold group flex gap-3 items-center justify-center px-5 py-3 text-gray-800  bg-teal-400 transition-all duration-300"
+            className="absolute bottom-20 ml-10 hover:scale-105 font-semibold group flex gap-3 items-center justify-center px-5 py-3 bg-gray-200  shadow-white text-rose-700 transition-all duration-300"
           >
             Get a Quote
             <FaPenToSquare className="text-md group-hover:translate-x-1 transition" />

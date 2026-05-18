@@ -45,7 +45,7 @@ const SkillJourney = () => {
     {
       title: "Mobile App Development",
       icon: BiMobileAlt,
-      color: "teal",
+      color: "rose",
       tools: ["Flutter", "React Native", "Kotlin", "Firebase", "GraphQL"],
     },
   ];
@@ -55,7 +55,7 @@ const SkillJourney = () => {
       id: 1,
       year: "2026",
       icon: FaMobileButton,
-      color: "bg-teal-900",
+      color: "bg-rose-900",
       title: "Mobile Application Development",
       description:
         "Complex architectural patterns, native platform constraints, and performance management",
@@ -64,7 +64,7 @@ const SkillJourney = () => {
       id: 2,
       year: "2025",
       icon: LuRocket,
-      color: "bg-teal-800",
+      color: "bg-rose-800",
       title: "Shipping Complete Products",
       description:
         "Deep dive into software engineering, and shipping complete and scalable products that reflect the brand and identity of clients.",
@@ -73,7 +73,7 @@ const SkillJourney = () => {
       id: 3,
       year: "2024",
       icon: LuBrain,
-      color: "bg-teal-700",
+      color: "bg-rose-700",
       title: "Building Real Projects",
       description:
         "Getting into backend development and shipping statement pieces while contributing to open source works on several platforms.",
@@ -82,7 +82,7 @@ const SkillJourney = () => {
       id: 4,
       year: "2023",
       icon: LuPenTool,
-      color: "bg-teal-600",
+      color: "bg-rose-600",
       title: "Deep dive into Frontend Development",
       description:
         "Figm, Canva, React Hooks, state, routing, and modern tooling & TypeScript.",
@@ -91,7 +91,7 @@ const SkillJourney = () => {
       id: 5,
       year: "2022",
       icon: LuCodeXml,
-      color: "bg-teal-600",
+      color: "bg-rose-600",
       title: "Fundamentals of Web Development",
       description:
         "HTML, CSS, JavaScript — the foundation everything builds on.",
@@ -148,15 +148,15 @@ const SkillJourney = () => {
                   className="lg:ml-20  flex gap-5 text-left self-start "
                 >
                   <div
-                    className={`w-14 h-14 flex items-center relative z-50  justify-center rounded-full ${step.color} bg-teal-100 group`}
+                    className={`w-14 h-14 flex items-center relative z-50  justify-center rounded-full ${step.color} bg-rose-100 group`}
                   >
-                    <div className="w-0.5 h-25 bg-teal-900 absolute lg:top-14 lg:left-7 z-0" />
+                    <div className="w-0.5 h-25 bg-rose-900 absolute lg:top-14 lg:left-7 z-0" />
                     <Icon className="text-white text-2xl z-50 group-hover:text-3xl transition-all duration-300 ease-out" />
                   </div>
 
                   <div className="flex flex-col text-left gap-2">
-                    <div className="w-13 h-6 bg-teal-100">
-                      <span className="text-teal-700 pl-2 font-semibold ">
+                    <div className="w-13 h-6 bg-rose-100">
+                      <span className="text-rose-700 pl-2 font-semibold ">
                         {step.year}
                       </span>
                     </div>
