@@ -335,7 +335,7 @@ const projects = [
     title: "Tutor Portal — Computing Programs for Every Stage",
     description:
       "A centralized web portal offering structured course outlines for 8 computing disciplines, from IT Foundations to Mobile App Development and Graphic Design.",
-    image: "tutorPortal",
+    image: tutorPortal,
     type: "Web Application",
     tech: [
       "PHP",
@@ -369,24 +369,7 @@ const projects = [
       "I improved my skills in component composition (reusing a single 'OutlineModal' for 8 different data sets), managing complex state in React, and generating PDFs client-side using jsPDF. I also learned how to design for scanability—students read outlines in 30 seconds or less.",
     github: "https://github.com/gideb/tutor-portal",
     liveDemo: "https://tutor-portal-demo.com",
-    /* programDetails: {
-      "IT Foundation":
-        "Hardware, OS, Networking, and Office Suite basics. 6 weeks. Includes: PC assembly, Windows/Linux, TCP/IP, Excel/Word.",
-      "Kids Coding":
-        "Block-based programming and logic for young minds. 8 weeks. Tools: Scratch, Code.org, Minecraft Education.",
-      "Web Development":
-        "HTML5, CSS3, JavaScript, and Responsive Design. 12 weeks. Final project: Portfolio website.",
-      "Software Development":
-        "Desktop applications, Python, and C# programming. 16 weeks. Covers OOP, data structures, debugging.",
-      "Database Admin":
-        "SQL, Management, and Data Security. 10 weeks. Focus: MySQL, PostgreSQL, backups, user permissions.",
-      "System Engineering":
-        "Server management, Networking, and Infrastructure. 14 weeks. Linux admin, cloud basics (AWS), firewalls.",
-      "Mobile App Dev":
-        "React Native, Flutter, and Android/iOS basics. 12 weeks. Build cross-platform apps with device APIs.",
-      "Graphic Designing":
-        "Photoshop, Illustrator, and UI/UX Principles. 10 weeks. Projects: logos, posters, mobile mockups.",
-    }, */
+   
   },
   {
     id: 11,
@@ -394,7 +377,7 @@ const projects = [
     title: "Luxe Beauty Brand Identity",
     description:
       "Complete brand transformation with sophisticated visual identity and premium packaging design for a luxury skincare and cosmetics line.",
-    image: "luxebeauty",
+    image: luxebeauty,
     type: "Branding & Identity",
     tech: [
       "Adobe Illustrator",
@@ -441,7 +424,7 @@ const projects = [
     title: "Codeuni University Website",
     description:
       "A modern, fully responsive university website showcasing a full spectrum of programming programs at every level — from beginner coding foundations to advanced software engineering degrees.",
-    image: "codeuni",
+    image: codeuni,
     type: "Web Application",
     tech: [
       "React",
@@ -479,21 +462,7 @@ const projects = [
       "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
     github: "https://github.com/gideb/codeuni-website",
     liveDemo: "https://codeuni-university-demo.com",
-  /*   programsBreakdown: {
-      foundation: "Coding Bootcamp, IT Essentials, Web Fundamentals",
-      undergraduate:
-        "BSc Computer Science, BSc Software Engineering, BSc Data Science, BSc Cybersecurity",
-      postgraduate:
-        "MSc Artificial Intelligence, MSc Cloud Computing, MSc Game Development",
-      shortCourses:
-        "Python for Beginners, React Masterclass, SQL Database Design, DevOps Fundamentals",
-    },
-    metrics: {
-      loadTime: "0.8s average (LCP)",
-      bounceRateReduction: "47% → 22%",
-      applicationIncrease: "+65% YoY",
-      accessibilityScore: "98/100 (Lighthouse)",
-    }, */
+
   },
 ];
 

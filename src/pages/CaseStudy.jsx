@@ -1,8 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import projects from "../data/projects";
+import { useParams, Link } from "react-router-dom";
 import {
-  Fa4,
   FaArrowLeft,
   FaArrowRight,
   FaGithub,
@@ -10,159 +8,184 @@ import {
   FaQuestion,
   FaRecordVinyl,
 } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { LuBusFront, LuFile, LuTarget, LuLightbulb } from "react-icons/lu";
+import projects from "../data/projects";
 import Topic from "../components/Props/Topic";
-import Subheading from "../components/Props/Subheading";
-import { LuBusFront, LuFile, LuLightbulb, LuTarget } from "react-icons/lu";
-import CTASection from "../components/Props/CTASection";
 import CTASectionTwo from "../components/Props/CTASectionTwo";
 import Button from "../components/ui/Button";
 
+// Helper component for info cards
+const InfoCard = ({ icon: Icon, title, children, bgColor = "bg-white" }) => (
+  <div
+    className={`rounded-xl ${bgColor} border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col gap-4 p-8 flex-1`}
+  >
+    <div className="flex items-center gap-3">
+      <div className="p-2 bg-teal-100 rounded-lg">
+        <Icon className="text-teal-600 text-xl" />
+      </div>
+      <h3 className="font-semibold text-slate-800 text-lg">{title}</h3>
+    </div>
+    <div className="text-slate-600 leading-relaxed">{children}</div>
+  </div>
+);
+
+const FeatureCard = ({ feature, index }) => (
+  <div className="group flex items-start gap-4 p-4 rounded-xl border border-slate-200 bg-white hover:shadow-md hover:border-teal-200 transition-all duration-300">
+    <div className="w-10 h-10 rounded-lg bg-linear-to-br from-teal-600 to-emerald-700 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+      <LuBusFront className="text-white text-lg" />
+    </div>
+    <span className="text-slate-700 leading-relaxed">{feature}</span>
+  </div>
+);
+
+
 const CaseStudy = () => {
   const { slug } = useParams();
-
   const project = projects.find((project) => project.slug === slug);
 
   if (!project) {
-    return <h1>Project not found</h1>;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-slate-800 mb-4">
+            Project Not Found
+          </h1>
+          <Link
+            to="/projects"
+            className="text-teal-600 hover:text-teal-700 underline"
+          >
+            Back to Projects
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <section className="py-20 bg-white mt-10">
-      <div className="max-w-7xl mx-auto text-left items-left px-4 py-10 space-y-8">
-        <div>
-          <Link
-            to="/projects"
-            className="flex items-center gap-2 hover:gap-3 text-gray-600 hover:text-gray-400 transition-all duration-300 text-xs my-5"
-          >
-            <FaArrowLeft /> <span>All Projects</span>
-          </Link>
+    <section className="bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        {/* Navigation */}
+        <Link
+          to="/projects"
+          className="inline-flex items-center gap-2 text-slate-500 hover:text-teal-600 transition-all duration-300 text-sm group mb-8"
+        >
+          <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
+          <span>Back to All Projects</span>
+        </Link>
 
+        {/* Header Section */}
+        <div className="max-w-4xl">
           <Topic topic={project.type} />
-          <h2 className="text-3xl lg:text-5xl text-slate-800 font-bold leading-none mb-2">
+          <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 leading-none mt-4 mb-4">
             {project.title}
-          </h2>
-
-          <p className="text-leading text-slate-500 text-md">
+          </h1>
+          <p className="text-lg lg:text-xl text-slate-500 leading-relaxed mb-6">
             {project.description}
           </p>
 
-          {/* stack */}
-          <div className="flex flex-wrap my-4 items-center gap-2">
-            {project.tech.map((techstack, techIndex) => (
+          {/* Tech Stack */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {project.tech.map((tech, index) => (
               <span
-                key={techIndex}
-                className="text-xs text-slate-500 bg-slate-100 px-3 py-2 rounded-xl"
+                key={index}
+                className="text-sm text-slate-600 bg-slate-100 px-4 py-2 rounded-full hover:bg-slate-200 transition-colors duration-200"
               >
-                {techstack}
+                {tech}
               </span>
             ))}
           </div>
 
-          {/* live demo & github repo */}
-          <div className="flex flex-col md:flex-row gap-4 ">
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button
-              buttonText="live demo"
+              buttonText="Live Demo"
               icon={FaRecordVinyl}
               path="."
               variant="secondary"
             />
             <Button
-              buttonText="github"
+              buttonText="GitHub Repository"
               icon={FaGithub}
               path=".github"
               variant="primary"
             />
           </div>
 
-          <div className=" mt-10 group ">
+          {/* Hero Image */}
+          <div className="rounded-2xl overflow-hidden shadow-xl mb-16">
             <img
               src={project.image}
               alt={project.title}
-              className="w-full rounded-3xl group-hover:scale-101 transition-all duration-500 ease"
+              className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
         </div>
-        <div className="flex flex-col space-y-4"></div>
 
-        {/* overview */}
-        <div className="pt-20">
-          <div className="rounded-xl bg-white border  border-slate-300 hover:shadow text-slate-600 flex flex-col gap-3 my-9 p-8">
-            <LuFile className="text-teal-700 text-2xl" />
-            <h3 className="font-bold text-slate-800">Project Overview</h3>
+        {/* Overview Section */}
+        <div className="mb-20">
+          <InfoCard
+            icon={LuFile}
+            title="Project Overview"
+            bgColor="bg-slate-50"
+          >
             {project.overview}
-          </div>
-
-          {/* problem and solution */}
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="rounded-xl bg-gray-50 border text-slate-600 border-slate-300 flex flex-col gap-3 p-6 m-2 flex-1/2 hover:shadow">
-              <LuTarget className="text-teal-700 text-2xl" />
-              <h2 className="font-semibold text-slate-800"> The Problem</h2>
-
-              {project.problem}
-            </div>
-            <div className="rounded-xl bg-gray-50 text-slate-600 border border-slate-300 hover:shadow flex flex-col gap-3 p-6 m-2 flex-1/2">
-              <FaLightbulb className="text-2xl text-teal-700" />
-              <h2 className="font-semibold text-slate-800">The Solution</h2>
-
-              {project.solution}
-            </div>
-          </div>
+          </InfoCard>
         </div>
 
-        {/* key features */}
-        <div className="my-20">
-          <h2 className="text-xl font-bold">Key Features</h2>
+        {/* Problem & Solution Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
+          <InfoCard icon={LuTarget} title="The Problem">
+            {project.problem}
+          </InfoCard>
+          <InfoCard icon={FaLightbulb} title="The Solution">
+            {project.solution}
+          </InfoCard>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 mt-3 gap-1 ">
+        {/* Key Features Section */}
+        <div className="mb-20">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">
+              Key Features
+            </h2>
+            <p className="text-slate-500 max-w-2xl mx-auto">
+              Discover what makes this project unique and impactful
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
             {project.features.map((feature, idx) => (
-              <div
-                key={idx}
-                className="text-sm text-slate-800 border border-gray-300 px-5 py-3 rounded-xl flex m-2 gap-4"
-              >
-                <div className="w-9 h-9 rounded-full bg-emerald-900 flex items-center justify-center">
-                  <LuBusFront className="text-white" />
-                </div>
-
-                {feature}
-              </div>
+              <FeatureCard key={idx} feature={feature} index={idx} />
             ))}
           </div>
         </div>
 
-        {/* challenges and lesson */}
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="rounded-xl bg-white border text-slate-600 border-slate-300 flex flex-col gap-3 p-6 m-2 flex-1/2 hover:shadow">
-            <FaQuestion className="text-teal-700 text-2xl" />
-            <h2 className="font-semibold text-slate-800">
-              {" "}
-              Challenges & Solutions
-            </h2>
-
+        {/* Challenges & Learnings Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
+          <InfoCard icon={FaQuestion} title="Challenges & Solutions">
             {project.challenges}
-          </div>
-          <div className="rounded-xl bg-white text-slate-600 border border-slate-300 hover:shadow flex flex-col gap-3 p-6 m-2 flex-1/2">
-            <LuLightbulb className="text-2xl text-teal-700" />
-            <h2 className="font-semibold text-slate-800">Lesson learned</h2>
-
+          </InfoCard>
+          <InfoCard icon={LuLightbulb} title="Lessons Learned">
             {project.learned}
-          </div>
+          </InfoCard>
         </div>
 
-        {/* next project button  */}
-        <Link
-          to="/projects/next"
-          className="flex items-center gap-2 hover:gap-3 text-gray-600 hover:text-gray-400 transition-all duration-300 text-xs my-15 justify-end"
-        >
-          <span>Next Project</span>
-          <FaArrowRight />
-        </Link>
+        {/* Next Project Navigation */}
+        <div className="flex justify-end mb-20">
+          <Link
+            to="/projects/next"
+            className="group inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-teal-600 text-white rounded-full transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl"
+          >
+            <span>Next Project</span>
+            <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+          </Link>
+        </div>
 
+        {/* CTA Section */}
         <CTASectionTwo
           buttonText="Get in touch"
           path="/contact"
           heading="Enjoying what you see?"
-          description="Let's talk about your next project"
+          description="Let's collaborate on your next big idea"
         />
       </div>
     </section>
