@@ -7,6 +7,9 @@ import urlShortener from "../assets/images/project/project-url-shortener.jpg";
 import uiDesign from "../assets/images/project/project-ui-design.jpg";
 import expenseTracker from "../assets/images/project/project-expense-tracker.jpg";
 import notesApp from "../assets/images/project/project-notes-app.jpg";
+import codeuni from "../assets/images/project/project-codeuni.jpg";
+import tutorPortal from "../assets/images/project/project-tutorPortal.png";
+import luxebeauty from "../assets/images/project/project-luxebeauty.jpg";
 
 const projects = [
   {
@@ -275,7 +278,8 @@ const projects = [
     solution:
       "I built a React app with Context API for global cart state. The gallery includes thumbnail navigation and a lightbox modal. Cart data persists in localStorage so items survive page refresh.",
     features: [
-      "Product image gallery with lightbox modal","Thumbnail carousel",
+      "Product image gallery with lightbox modal",
+      "Thumbnail carousel",
       "Variant selection (size, color) with stock validation",
       "Quantity selector with min/max limits",
       "Add to cart with micro-interactions (framer motion)",
@@ -324,6 +328,172 @@ const projects = [
       "I learned about caching strategies (Redis), background job queues (Bull), and database indexing for high-read workloads. I also implemented geolocation from IP addresses using a free API.",
     github: "https://github.com/gideb/url-shortener",
     liveDemo: "https://url-demo.com",
+  },
+  {
+    id: 10,
+    slug: "tutor-portal",
+    title: "Tutor Portal — Computing Programs for Every Stage",
+    description:
+      "A centralized web portal offering structured course outlines for 8 computing disciplines, from IT Foundations to Mobile App Development and Graphic Design.",
+    image: "tutorPortal",
+    type: "Web Application",
+    tech: [
+      "PHP",
+      "JavaScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Local Storage",
+      "Vercel",
+    ],
+    overview:
+      "This platform serves as a digital gateway for students at different skill levels. It presents detailed, downloadable course outlines for eight distinct computing programs. Each 'portal' (e.g., Kids Coding, Web Development) contains a breakdown of modules, learning outcomes, and estimated durations.",
+    problem:
+      "Educational institutions often list program names without showing what is actually taught. Students struggle to compare courses like 'System Engineering' vs 'Software Development' before enrolling. There was no single, visual hub to explore the granular syllabus of each computing track.",
+    solution:
+      "I built a card-based portal interface where each program has a dedicated 'Open Portal' button. Clicking it reveals a dynamic modal or separate page containing the full course outline, weekly breakdown, required tools, and target audience—all styled consistently for easy comparison.",
+    features: [
+      "Hero section with animated headline for 'Computing Programs for Every Stage'",
+      "8 distinct program cards (IT Foundation, Kids Coding, Web Dev, Software Dev, Database Admin, System Engineering, Mobile App Dev, Graphic Designing)",
+      "Individual 'OPEN PORTAL' buttons that trigger detailed syllabus views",
+      "Course outline details for each program: Modules, Duration, Prerequisites, Tools used",
+      "Download as PDF feature for each outline",
+      "Responsive grid layout (works on mobile, tablet, desktop)",
+      "Progress tracking (local storage) to mark completed modules per program",
+      "Search/filter to find programs by keyword (e.g., 'Python', 'SQL', 'UI/UX')",
+      "Dark/Light mode toggle for improved readability",
+      "Print-friendly course outline pages",
+    ],
+    challenges:
+      "Structuring 8 unique syllabi without repeating content was tough. I created a central data model (JSON) that stores all modules for each program, then mapped it dynamically. Ensuring the 'OPEN PORTAL' animations didn't lag on lower-end devices required debouncing state changes.",
+    learned:
+      "I improved my skills in component composition (reusing a single 'OutlineModal' for 8 different data sets), managing complex state in React, and generating PDFs client-side using jsPDF. I also learned how to design for scanability—students read outlines in 30 seconds or less.",
+    github: "https://github.com/gideb/tutor-portal",
+    liveDemo: "https://tutor-portal-demo.com",
+    /* programDetails: {
+      "IT Foundation":
+        "Hardware, OS, Networking, and Office Suite basics. 6 weeks. Includes: PC assembly, Windows/Linux, TCP/IP, Excel/Word.",
+      "Kids Coding":
+        "Block-based programming and logic for young minds. 8 weeks. Tools: Scratch, Code.org, Minecraft Education.",
+      "Web Development":
+        "HTML5, CSS3, JavaScript, and Responsive Design. 12 weeks. Final project: Portfolio website.",
+      "Software Development":
+        "Desktop applications, Python, and C# programming. 16 weeks. Covers OOP, data structures, debugging.",
+      "Database Admin":
+        "SQL, Management, and Data Security. 10 weeks. Focus: MySQL, PostgreSQL, backups, user permissions.",
+      "System Engineering":
+        "Server management, Networking, and Infrastructure. 14 weeks. Linux admin, cloud basics (AWS), firewalls.",
+      "Mobile App Dev":
+        "React Native, Flutter, and Android/iOS basics. 12 weeks. Build cross-platform apps with device APIs.",
+      "Graphic Designing":
+        "Photoshop, Illustrator, and UI/UX Principles. 10 weeks. Projects: logos, posters, mobile mockups.",
+    }, */
+  },
+  {
+    id: 11,
+    slug: "luxe-beauty-brand",
+    title: "Luxe Beauty Brand Identity",
+    description:
+      "Complete brand transformation with sophisticated visual identity and premium packaging design for a luxury skincare and cosmetics line.",
+    image: "luxebeauty",
+    type: "Branding & Identity",
+    tech: [
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Procreate",
+      "Cinema 4D",
+      "Figma",
+      "Adobe InDesign",
+    ],
+    overview:
+      "A full-spectrum brand identity project for a premium beauty client moving from generic retail to high-end positioning. Deliverables included logo system, color palette, typography, pattern library, packaging suite (boxes, jars, ribbons), and brand guidelines.",
+    problem:
+      "The client's existing brand felt dated and indistinguishable from drugstore competitors. They were launching a new 'Gold Elixir' serum line priced at $120+ but had no visual language that communicated luxury, purity, or efficacy to high-income consumers.",
+    solution:
+      "I created a minimalist-yet-opulent identity rooted in soft neutrals, champagne metallics, and organic curves. The logo combines a custom serif wordmark with a botanical monogram. Packaging uses textured paper, foil stamping, and magnetic closures. A full guidelines book ensures every touchpoint (from Instagram to shopping bags) feels cohesive.",
+    features: [
+      "Primary & secondary logo marks (horizontal, vertical, icon-only)",
+      "Extended color palette: 8 colors (ivory, taupe, champagne, rose gold, deep plum, charcoal, blush, forest green)",
+      "Typography system: Playfair Display (serif) + Montserrat (sans) for digital/print hierarchy",
+      "Seamless pattern library (micro-floral, marble swirl, geometric diamond) for tissue paper and digital backgrounds",
+      "Complete packaging suite: serum box, moisturizer jar, sample sachets, shopping bag, ribbon seal",
+      "Social media kit: Instagram templates, story highlights covers, Reels lower thirds",
+      "Brand guidelines PDF (48 pages): usage rules, spacing, color codes, forbidden applications",
+      "Mockup library: 20+ photorealistic renders for lookbooks and pitch decks",
+      "Custom illustrated botanical elements (rose, jasmine, sandalwood) for collateral",
+      "Scent + texture descriptor language guidelines (e.g., 'velvet finish,' 'golden nectar')",
+    ],
+    challenges:
+      "Balancing 'minimal luxury' with 'warm approachability'—too cold felt clinical, too ornate felt dated. I solved this by using soft matte finishes with small, unexpected accents (e.g., a single rose gold foil line inside every box). Also, ensuring the identity worked across tiny jar labels (1 inch) and billboards without losing legibility required three logo lockups.",
+    learned:
+      "I deepened my understanding of color psychology in the beauty space—champagne signals premium but blush builds trust. I also learned production-ready specs: die-cut templates, foil stamping compatible files, and Pantone matching for consistent printing across cardboard, glass, and plastic substrates.",
+    client: "Luxe Beauty (confidential)",
+    year: "2025",
+    delivery:
+      "Brand guidelines PDF + Master asset folder (2.4 GB) — fonts, logos in 5 formats (AI, EPS, SVG, PNG, JPG), patterns, mockups, social templates",
+    testimonial:
+      "Our sales increased 210% after the rebrand. For the first time, customers tell us our packaging 'looks like it costs $200.' The guidelines made onboarding our printers seamless.",
+    github: "https://www.behance.net/gallery/luxe-beauty-identity",
+    liveDemo: "https://luxebeauty-brand-portfolio.com",
+  },
+  {
+    id: 12,
+    slug: "codeuni-website",
+    title: "Codeuni University Website",
+    description:
+      "A modern, fully responsive university website showcasing a full spectrum of programming programs at every level — from beginner coding foundations to advanced software engineering degrees.",
+    image: "codeuni",
+    type: "Web Application",
+    tech: [
+      "React",
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Payload CMS",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    overview:
+      "A flagship institutional website for Codeuni — a modern programming university. The platform features program catalogs, faculty profiles, dynamic admissions portals, event calendars, and student dashboards. Designed to convert prospective students while serving current enrollees with course materials and grade access.",
+    problem:
+      "Traditional university websites feel dated, hard to navigate, and fail to attract tech-savvy students. Codeuni needed a digital presence that reflects its cutting-edge curriculum — fast, visual, mobile-first, and built with the very technologies it teaches. The old site had 47% bounce rate and abysmal mobile performance.",
+    solution:
+      "I built a Next.js application with server-side rendering for SEO and instant page loads. The design uses bold typography, dark/light modes, and micro-interactions that signal 'modern tech.' A headless CMS allows admissions staff to update program details without touching code. Program pages feature curriculum previews, career outcomes, tuition tools, and alumni testimonials.",
+    features: [
+      "Hero section with animated code typing effect (rotating through: 'Python', 'React', 'Rust', 'AI')",
+      "Program catalog: 15+ degrees (BSc, MSc, Diploma, Certificates) filterable by level, duration, or format (online/on-campus/hybrid)",
+      "Individual program pages with: curriculum breakdown, learning outcomes, instructors, tuition calculator, application deadline countdown",
+      "Faculty directory with search, research interests, and office hours booking",
+      "Student portal: course enrollment, grade viewer, assignment submission, attendance tracker",
+      "Virtual campus tour (360° photos + embedded walkthrough videos)",
+      "Events & hackathon calendar with RSVP functionality",
+      "Admissions workflow: online application, document upload, status tracking, offer letter generation",
+      "Blog/News section: student spotlights, industry partnerships, research breakthroughs",
+      "Full accessibility (WCAG 2.1 AA compliant) and responsive design (mobile-first)",
+      "Real-time chat widget for prospective student inquiries",
+      "Analytics dashboard for admin: application funnels, page performance, user demographics",
+    ],
+    challenges:
+      "Balancing rich visual design with performance was critical — heavy animations on program cards caused layout shifts. I solved this by using Next.js image optimization and CSS transforms instead of JavaScript-driven animations. Also, the admissions workflow required secure document uploads (PDF, images) with virus scanning, which I implemented using AWS S3 + Lambda checks.",
+    learned:
+      "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
+    github: "https://github.com/gideb/codeuni-website",
+    liveDemo: "https://codeuni-university-demo.com",
+  /*   programsBreakdown: {
+      foundation: "Coding Bootcamp, IT Essentials, Web Fundamentals",
+      undergraduate:
+        "BSc Computer Science, BSc Software Engineering, BSc Data Science, BSc Cybersecurity",
+      postgraduate:
+        "MSc Artificial Intelligence, MSc Cloud Computing, MSc Game Development",
+      shortCourses:
+        "Python for Beginners, React Masterclass, SQL Database Design, DevOps Fundamentals",
+    },
+    metrics: {
+      loadTime: "0.8s average (LCP)",
+      bounceRateReduction: "47% → 22%",
+      applicationIncrease: "+65% YoY",
+      accessibilityScore: "98/100 (Lighthouse)",
+    }, */
   },
 ];
 

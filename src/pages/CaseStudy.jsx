@@ -60,7 +60,7 @@ const CaseStudy = () => {
           </div>
 
           {/* live demo & github repo */}
-          <div className="flex flex-col md:flex-row gap-4 items-center">
+          <div className="flex flex-col md:flex-row gap-4 ">
             <Button
               buttonText="live demo"
               icon={FaRecordVinyl}

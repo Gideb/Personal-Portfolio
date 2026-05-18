@@ -38,7 +38,7 @@ const Navbar = () => {
         className={`fixed top-0 left-0 z-100 w-full transition-all duration-300 ${scrolled ? "bg-white shadow-md py-4" : "bg-transparent py-8"}`}
       >
         <div className="max-w-7xl flex items-center justify-between mx-auto px-6 pt-3 lg:pt-7">
-          <Link to="/">
+          <Link to="/" className="z-10">
             <img src={image} alt="portfolio logo" className="w-16 " />
           </Link>
 
@@ -72,7 +72,7 @@ const Navbar = () => {
           {/* mobile hamburger */}
 
           <button
-            className={`cursor-pointer flex flex-col gap-1 md:hidden hover:opacity-85 transition duration-300 `}
+            className={`cursor-pointer flex flex-col gap-1 md:hidden hover:opacity-85 transition duration-300 z-10 `}
             onClick={() => setOpenMenu(true)}
           >
             <span className="w-5 h-1 bg-teal-700"></span>
@@ -90,18 +90,18 @@ const Navbar = () => {
 
       {/* sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-90 bg-teal-800 z-50 transform transition-transform duration-400 ease-out border-l ${openMenu ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 h-full w-90 bg-teal-800 z-100 transform transition-transform duration-400 ease-out border-l ${openMenu ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex h-full flex-col p-10">
           {/* close buton */}
           <button
-            className="px-3  bg-teal-600 rounded cursor-pointer self-end text-gray-300 font-semibold text-3xl transition hover:text-gray-400 "
+            className="px-2  bg-teal-600 rounded shadow-xs shadow-white cursor-pointer self-end text-gray-200 font-semibold text-xl transition hover:text-gray-100 "
             onClick={() => setOpenMenu(false)}
           >
             x
           </button>
 
-          <div className="flex flex-col text-lg gap-6 mt-20 ml-10">
+          <div className="flex flex-col text-lg gap-6 mt-20 ml-5 md:ml-10">
             {navLinks.map((link, index) => (
               <div key={index}>
                 <NavLink
