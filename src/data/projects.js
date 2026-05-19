@@ -2,7 +2,7 @@ import socialMedia from "../assets/images/project/project-social-media.jpg";
 import ecommmerce from "../assets/images/project/project-ecommerce.jpg";
 import fitnessTracker from "../assets/images/project/project-fitness.jpg";
 import taskManager from "../assets/images/project/project-task-manager.jpg";
-import weatherApp from "../assets/images/project/project-weather-2.jpg";
+import weatherApp from "../assets/images/project/project-weather.jpg";
 import urlShortener from "../assets/images/project/project-url-shortener.jpg";
 import uiDesign from "../assets/images/project/project-ui-design.jpg";
 import expenseTracker from "../assets/images/project/project-expense-tracker.jpg";
@@ -19,7 +19,7 @@ const projects = [
     description:
       "A full-stack dashboard that aggregates and visualizes social media metrics from multiple platforms in one place.",
     image: socialMedia,
-    type: "Full Stack",
+    category: "Full Stack",
     tech: [
       "MongoDB",
       "Express",
@@ -62,7 +62,7 @@ const projects = [
     description:
       "A real-time weather dashboard that displays current conditions and 5-day forecasts for any city worldwide.",
     image: weatherApp,
-    type: "Frontend",
+    category: "Frontend",
     tech: ["React", "OpenWeather API", "Axios", "CSS Modules"],
     overview:
       "This web app fetches live weather data from the OpenWeather API and presents it in an intuitive dashboard with dynamic icons, temperature toggles (°C/°F), and search history.",
@@ -93,7 +93,7 @@ const projects = [
     description:
       "A reusable component library with buttons, modals, forms, and cards, built as a living style guide.",
     image: uiDesign,
-    type: "Frontend",
+    category: "UI",
     tech: ["React", "Storybook", "Styled Components", "TypeScript"],
     overview:
       "This project is a production-ready component library designed for consistency across applications. It includes dark mode support, accessibility features, and full documentation.",
@@ -124,7 +124,7 @@ const projects = [
     description:
       "A RESTful backend for managing personal finances with user authentication, income/expense tracking, and spending analytics.",
     image: expenseTracker,
-    type: "Backend",
+    category: "Backend",
     tech: ["Node.js", "Express", "MongoDB", "JWT", "Mongoose"],
     overview:
       "This API allows users to register, log in, add transactions (income/expense), categorize them, and retrieve summaries like monthly spending or budget vs. actual reports.",
@@ -156,7 +156,7 @@ const projects = [
     description:
       "A full-stack MERN application where users can create, edit, organize, and share notes with others in real-time.",
     image: notesApp,
-    type: "Full Stack",
+    category: "Full Stack",
     tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "Tailwind"],
     overview:
       "This is a complete note-taking platform with markdown support, tags, search, and real-time collaboration. Users can share notes with view or edit permissions.",
@@ -189,7 +189,7 @@ const projects = [
     description:
       "A cross-platform mobile app for managing daily tasks with reminders, categories, and offline support.",
     image: taskManager,
-    type: "Mobile",
+    category: "Mobile",
     tech: [
       "React Native",
       "Expo",
@@ -228,7 +228,7 @@ const projects = [
     description:
       "A full-stack mobile app that logs workouts, tracks progress with charts, and provides personalized exercise recommendations.",
     image: fitnessTracker,
-    type: "Mobile + Backend",
+    category: "Mobile",
     tech: [
       "React Native",
       "Node.js",
@@ -269,7 +269,7 @@ const projects = [
       "A fully responsive product page with image gallery, variant selection, cart management, and local storage persistence.",
 
     image: ecommmerce,
-    type: "Frontend",
+    category: "Frontend",
     tech: ["React", "Context API", "Tailwind CSS", "Framer Motion"],
     overview:
       "This UI component simulates an e-commerce product page, featuring a lightbox gallery, size/color pickers, quantity selector, and a mini-cart with add/remove functionality.",
@@ -303,7 +303,7 @@ const projects = [
     description:
       "A scalable URL shortening service with custom aliases, click tracking, analytics, and expiration dates.",
     image: urlShortener,
-    type: "Backend",
+    category: "Backend",
     tech: ["Node.js", "Express", "PostgreSQL", "Redis", "JWT"],
     overview:
       "This backend service converts long URLs into short codes, redirects users, and tracks clicks (referrer, geolocation, device type). It supports user accounts, custom slugs, and link expiration.",
@@ -336,7 +336,7 @@ const projects = [
     description:
       "A centralized web portal offering structured course outlines for 8 computing disciplines, from IT Foundations to Mobile App Development and Graphic Design.",
     image: tutorPortal,
-    type: "Web Application",
+    category: "Web Application",
     tech: [
       "PHP",
       "JavaScript",
@@ -369,7 +369,6 @@ const projects = [
       "I improved my skills in component composition (reusing a single 'OutlineModal' for 8 different data sets), managing complex state in React, and generating PDFs client-side using jsPDF. I also learned how to design for scanability—students read outlines in 30 seconds or less.",
     github: "https://github.com/gideb/tutor-portal",
     liveDemo: "https://tutor-portal-demo.com",
-   
   },
   {
     id: 11,
@@ -378,7 +377,7 @@ const projects = [
     description:
       "Complete brand transformation with sophisticated visual identity and premium packaging design for a luxury skincare and cosmetics line.",
     image: luxebeauty,
-    type: "Branding & Identity",
+    category: "Branding",
     tech: [
       "Adobe Illustrator",
       "Adobe Photoshop",
@@ -425,7 +424,7 @@ const projects = [
     description:
       "A modern, fully responsive university website showcasing a full spectrum of programming programs at every level — from beginner coding foundations to advanced software engineering degrees.",
     image: codeuni,
-    type: "Web Application",
+    category: "Web Development",
     tech: [
       "React",
       "Next.js 14",
@@ -462,7 +461,6 @@ const projects = [
       "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
     github: "https://github.com/gideb/codeuni-website",
     liveDemo: "https://codeuni-university-demo.com",
-
   },
 ];
 
