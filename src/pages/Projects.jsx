@@ -13,12 +13,13 @@ const Projects = () => {
 
   // project Categories
   const categories = [
-    { id: "all", name: "All Posts" },
+    { id: "all", name: "All" },
     { id: "frontend", name: "Frontend" },
     { id: "backend", name: "Backend" },
     { id: "web-design", name: "Web Design" },
     { id: "web-development", name: "Web Development" },
     { id: "mobile-development", name: "Mobile Development" },
+    { id: "branding", name: "Branding" },
   ];
 
   const choices = ["All", "Frontend", "Backend", "UI", "React", "Javascript"];

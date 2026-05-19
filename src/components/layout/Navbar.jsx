@@ -56,7 +56,7 @@ const Navbar = () => {
                 >
                   {link.name}
                 </NavLink>
-              </div>
+          </div>        
             ))}
           </div>
 

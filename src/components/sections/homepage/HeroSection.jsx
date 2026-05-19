@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="scroll-mt-16 relative mt-10 sm:mt-5  w-full overflow-hidden bg-[#F9F6F0] py-8 sm:py-8 lg:py-22 "
+      className="scroll-mt-16 relative mt-10 sm:mt-5  w-full overflow-hidden bg-white py-8 sm:py-8 lg:py-22 "
       aria-label="Hero section"
     >
       <div className="z-10 mt-10 px-4 lg:px-7 max-w-7xl mx-auto py-10 items-center my-5 space-y-10 flex">
