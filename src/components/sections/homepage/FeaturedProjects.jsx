@@ -13,7 +13,7 @@ const FeaturedProjects = () => {
     <section className="bg-white w-full py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left mb-16 space-y-2">
-          <Topic topic="selected work" />
+          <Topic topic="selected work" variant="nobg" />
 
           <Link
             to="/projects"

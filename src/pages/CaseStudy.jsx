@@ -82,7 +82,7 @@ const CaseStudy = () => {
         </Link>
         {/* Header Section */}
         <div className="max-w-4xl">
-          <Topic topic={project.category} />
+          <Topic topic={project.category} variant="nobg" />
           <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 leading-none mt-4 mb-4">
             {project.title}
           </h1>

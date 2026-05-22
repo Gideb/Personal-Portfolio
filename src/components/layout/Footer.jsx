@@ -1,85 +1,212 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
-
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   const navLinks = [
     { name: "HOME", path: "/" },
     { name: "ABOUT", path: "/about" },
+    { name: "CONTACT", path: "/contact" },
     { name: "PROJECTS", path: "/projects" },
   ];
 
+  // Animation variants
+  const footerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  const linkVariants = {
+    initial: { x: 0 },
+    hover: {
+      x: 5,
+      transition: { duration: 0.2 },
+    },
+  };
+
+  const socialIconVariants = {
+    initial: { scale: 1, rotate: 0 },
+    hover: {
+      scale: 1.1,
+      rotate: 360,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 10,
+        duration: 0.4,
+      },
+    },
+    tap: { scale: 0.95 },
+  };
+
+  const lineVariants = {
+    initial: { width: 0 },
+    hover: { width: 16, transition: { duration: 0.3 } },
+  };
+
   return (
-    <section className="border-t border-slate-200 py-10 bg-white ">
+    <motion.section
+      className="border-t border-gray-200 py-10 bg-linear-to-br from-white via-gray-50 to-gray-100"
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <div className="max-w-7xl mx-auto text-center py-10 px-4 lg:px-7">
-        <div className="grid grid-cols-1 md:grid-cols-3 ">
-          <div className="flex flex-col gap-7 text-left">
-            <h2 className="text-3xl text-gray-900">Gideb.dev</h2>
-            <p className="text-left text-gray-500 text-sm">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
+          {/* Brand Section */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col gap-4 text-left"
+          >
+            <motion.h2
+              className="text-3xl font-bold bg-linear-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent"
+              whileHover={{ scale: 1.05, x: 5 }}
+              transition={{ duration: 0.2 }}
+            >
+              Gideb.dev
+            </motion.h2>
+            <p className="text-left text-gray-600 text-sm leading-relaxed">
               Software Engineer building clean, user-focused web experiences.
             </p>
-          </div>
+            <p className="text-left text-gray-600 text-sm leading-relaxed">
+              Visual creator blending all forms of creativity to tell stories
+              that stick.
+            </p>
+          </motion.div>
 
-          {/* quick links */}
-          <div className="flex flex-col gap-6 lg:ml-30 ">
-            <h3 className="text-md text-gray-700 text-left">NAVIGATION</h3>
+          {/* Quick Links */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col gap-4 md:ml-8 lg:ml-16"
+          >
+            <motion.h3
+              className="text-xs font-semibold text-gray-500 text-left tracking-wider"
+              whileHover={{ x: 5 }}
+            >
+              NAVIGATION
+            </motion.h3>
 
-            <div>
-              {navLinks.map((navLink) => (
-                <div
-                  className="relative py-1 text-left font-semibold "
+            <div className="space-y-2">
+              {navLinks.map((navLink, index) => (
+                <motion.div
                   key={navLink.name}
+                  variants={linkVariants}
+                  initial="initial"
+                  whileHover="hover"
+                  custom={index}
+                  className="relative py-0.5 text-left"
                 >
                   <Link
                     to={navLink.path}
-                    className="text-gray-700 hover:text-rose-800 transition-colors text-sm group flex items-center gap-2"
+                    className="text-gray-700 hover:text-cyan-600 transition-colors duration-300 text-sm group flex items-center gap-2 font-medium"
                   >
-                    <span className="w-0 group-hover:w-2 h-px bg-rose-800 transition-all duration-300" />
+                    <motion.span
+                      variants={lineVariants}
+                      initial="initial"
+                      whileHover="hover"
+                      className="h-px bg-linear-to-r from-cyan-600 to-blue-600 rounded-full"
+                    />
                     {navLink.name}
                   </Link>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          {/* social links */}
+          {/* Social Links */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col gap-4 md:ml-8 lg:ml-16"
+          >
+            <motion.h3
+              className="text-xs font-semibold text-gray-500 text-left tracking-wider"
+              whileHover={{ x: 5 }}
+            >
+              CONNECT
+            </motion.h3>
 
-          <div className="flex flex-col gap-6 lg:ml-30 my-4">
-            <h3 className="text-md text-gray-700 text-left">CONNECT</h3>
-            <div className="flex items-center text-left gap-3 ">
-              <Link
-                to="/github/gideb"
-                className="p-3 bg-pink-100 hover:bg-pink-300 transition-all duration-500 rounded-full"
+            <div className="flex items-center text-left gap-4">
+              <motion.div
+                variants={socialIconVariants}
+                initial="initial"
+                whileHover="hover"
+                whileTap="tap"
               >
-                <FaGithub className="text-xl text-slate-900 " />
-              </Link>
-              <Link
-                to="/linkedin/gideb"
-                className="p-3 bg-pink-100 hover:bg-pink-300 transition-all duration-500 rounded-full"
+                <Link
+                  to="https://github.com/gideb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-linear-to-br from-gray-100 to-gray-200 hover:from-cyan-100 hover:to-blue-100 transition-all duration-300 rounded-full block shadow-md hover:shadow-cyan-500/25"
+                >
+                  <FaGithub className="text-xl text-gray-700 hover:text-cyan-600 transition-colors duration-300" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                variants={socialIconVariants}
+                initial="initial"
+                whileHover="hover"
+                whileTap="tap"
               >
-                <FaLinkedin className="text-xl text-slate-900 " />
-              </Link>
-              <Link
-                to="/hello@gidev.dev"
-                className="p-3 bg-pink-100 hover:bg-pink-300 transition-all duration-500 rounded-full "
+                <Link
+                  to="https://linkedin.com/in/gideb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-linear-to-br from-gray-100 to-gray-200 hover:from-cyan-100 hover:to-blue-100 transition-all duration-300 rounded-full block shadow-md hover:shadow-cyan-500/25"
+                >
+                  <FaLinkedin className="text-xl text-gray-700 hover:text-cyan-600 transition-colors duration-300" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                variants={socialIconVariants}
+                initial="initial"
+                whileHover="hover"
+                whileTap="tap"
               >
-                <HiOutlineEnvelope className="text-xl text-slate-900 " />
-              </Link>
+                <Link
+                  to="mailto:hello@gideb.dev"
+                  className="p-3 bg-linear-to-br from-gray-100 to-gray-200 hover:from-cyan-100 hover:to-blue-100 transition-all duration-300 rounded-full block shadow-md hover:shadow-cyan-500/25"
+                >
+                  <HiOutlineEnvelope className="text-xl text-gray-700 hover:text-cyan-600 transition-colors duration-300" />
+                </Link>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="h-4 w-full z-20 text-gray-700 my-2"></div>
-        <div>
-          <h4 className="text-left">
-            &copy;copyright GIDEB.DEV {new Date().getFullYear()}
+        {/* Copyright Section */}
+        <motion.div
+          variants={itemVariants}
+          className="mt-12 pt-8 border-t border-gray-200"
+        >
+          <h4 className="text-left text-sm text-gray-500">
+            &copy; {new Date().getFullYear()} GIDEB.DEV — All rights reserved
           </h4>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
