@@ -50,13 +50,13 @@ const Navbar = () => {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `flex items-center gap-1 font-medium hover:text-gray-300 ${isActive ? " font-semibold text-rose-700" : "text-gray-700 hover:text-rose-500"}`
+                    `flex items-center gap-1 font-medium px-2 py-1 rounded hover:text-rose-600 transition-all duration-300 ${isActive ? " font-semibold text-rose-700 bg-rose-100 " : "text-gray-700 hover:text-rose-600 hover:bg-rose-100 hover:font-semibold"}`
                   }
                   end={link.path === "/"}
                 >
                   {link.name}
                 </NavLink>
-          </div>        
+              </div>
             ))}
           </div>
 

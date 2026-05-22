@@ -7,7 +7,9 @@ const Button = ({ path, buttonText, icon: Icon, variant = "primary" }) => {
 
   const styles = {
     secondary:
-      " text-white bg-linear-to-r from-rose-700 via-amber-300 to-pink-700",
+      " text-white bg-linear-to-r from-rose-700 via-amber-500 to-pink-700",
+    amber:
+      " text-white bg-linear-to-r from-amber-700 via-amber-500 to-amber-700 text-sm",
 
     primary: "text-rose-700 bg-white border",
   };
