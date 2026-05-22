@@ -294,11 +294,12 @@ const ContactPage = () => {
               variants={inputVariants}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              className="inline-flex"
             >
               <Button
                 buttonText="Send Message"
                 icon={RiSendPlaneFill}
-                path="/"
+                path=""
                 variant="cyan"
               />
             </motion.div>

@@ -1,5 +1,5 @@
 import socialMedia from "../assets/images/project/project-social-media.jpg";
-import ecommmerce from "../assets/images/project/project-ecommerce.jpg";
+import ecommmerce from "../assets/images/project/project-ecommerce2.jpg";
 import fitnessTracker from "../assets/images/project/project-fitness.jpg";
 import taskManager from "../assets/images/project/project-task-manager.jpg";
 import weatherApp from "../assets/images/project/project-weather.jpg";
@@ -53,6 +53,8 @@ const projects = [
       "I mastered OAuth flows for multiple providers, cron job scheduling with node-cron, real-time updates with WebSockets, and complex data aggregation from disparate sources. I also improved my charting and PDF generation skills.",
     github: "https://github.com/gideb/social-dashboard",
     liveDemo: "https://social-dashboard-demo.com",
+    featured: true,
+    year: 2025,
   },
 
   {
@@ -85,6 +87,8 @@ const projects = [
       "I gained experience working with third-party APIs, managing asynchronous state with useEffect and useState, and implementing client-side caching with localStorage.",
     github: "https://github.com/gideb/weather-dashboard",
     liveDemo: "https://weather-demo.com",
+    year: "2024",
+    featured: true,
   },
   {
     id: 3,
@@ -116,6 +120,8 @@ const projects = [
       "I learned advanced TypeScript patterns, component composition techniques, and how to publish a package to npm. I also improved my understanding of accessibility standards (WCAG).",
     github: "https://github.com/gideb/ui-design-system",
     liveDemo: "https://storybook-demo.com",
+    year: "2023",
+    featured: false,
   },
   {
     id: 4,
@@ -148,6 +154,8 @@ const projects = [
       "I deepened my knowledge of authentication/authorization, database indexing, and RESTful API design. I also learned to write unit tests with Jest and Supertest.",
     github: "https://github.com/gideb/expense-tracker-api",
     liveDemo: "https://expense-api-demo.com",
+    year: "2026",
+    featured: true,
   },
   {
     id: 5,
@@ -181,6 +189,8 @@ const projects = [
       "I learned real-time communication with WebSockets, conflict resolution strategies, and advanced MongoDB queries for tagging and search. I also improved my React state management with Zustand.",
     github: "https://github.com/gideb/notes-app",
     liveDemo: "https://notes-demo.com",
+    year: "2023",
+    featured: false,
   },
   {
     id: 6,
@@ -220,6 +230,8 @@ const projects = [
       "I learned mobile-specific patterns like navigation stacks, native modules, push notification setup, and offline storage strategies. I also tested on both iOS and Android simulators.",
     github: "https://github.com/gideb/task-manager-mobile",
     liveDemo: "https://expo.dev/@gideb/task-manager",
+    year: "2026",
+    featured: false,
   },
   {
     id: 7,
@@ -260,6 +272,8 @@ const projects = [
       "I improved my backend aggregation skills (MongoDB pipelines for time-series data) and learned charting libraries in React Native. I also implemented secure token refresh flows.",
     github: "https://github.com/gideb/fitness-tracker",
     liveDemo: "https://fitness-demo.com",
+    year: "2020",
+    featured: false,
   },
   {
     id: 8,
@@ -295,6 +309,8 @@ const projects = [
       "I mastered React Context + useReducer for global state, implemented accessible modal patterns, and improved my animation skills with Framer Motion. I also learned about localStorage hydration.",
     github: "https://github.com/gideb/ecommerce-product-page",
     liveDemo: "https://product-demo.com",
+    year: "2021",
+    featured: false,
   },
   {
     id: 9,
@@ -328,6 +344,8 @@ const projects = [
       "I learned about caching strategies (Redis), background job queues (Bull), and database indexing for high-read workloads. I also implemented geolocation from IP addresses using a free API.",
     github: "https://github.com/gideb/url-shortener",
     liveDemo: "https://url-demo.com",
+    year: "2022",
+    featured: false,
   },
   {
     id: 10,
@@ -369,6 +387,8 @@ const projects = [
       "I improved my skills in component composition (reusing a single 'OutlineModal' for 8 different data sets), managing complex state in React, and generating PDFs client-side using jsPDF. I also learned how to design for scanability—students read outlines in 30 seconds or less.",
     github: "https://github.com/gideb/tutor-portal",
     liveDemo: "https://tutor-portal-demo.com",
+    year: "2024",
+    featured: false,
   },
   {
     id: 11,
@@ -409,13 +429,15 @@ const projects = [
     learned:
       "I deepened my understanding of color psychology in the beauty space—champagne signals premium but blush builds trust. I also learned production-ready specs: die-cut templates, foil stamping compatible files, and Pantone matching for consistent printing across cardboard, glass, and plastic substrates.",
     client: "Luxe Beauty (confidential)",
-    year: "2025",
+
     delivery:
       "Brand guidelines PDF + Master asset folder (2.4 GB) — fonts, logos in 5 formats (AI, EPS, SVG, PNG, JPG), patterns, mockups, social templates",
     testimonial:
       "Our sales increased 210% after the rebrand. For the first time, customers tell us our packaging 'looks like it costs $200.' The guidelines made onboarding our printers seamless.",
     github: "https://www.behance.net/gallery/luxe-beauty-identity",
     liveDemo: "https://luxebeauty-brand-portfolio.com",
+    year: "2021",
+    featured: true,
   },
   {
     id: 12,
@@ -461,6 +483,8 @@ const projects = [
       "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
     github: "https://github.com/gideb/codeuni-website",
     liveDemo: "https://codeuni-university-demo.com",
+    year: "2023",
+    featured: false,
   },
 ];
 

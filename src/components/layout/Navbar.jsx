@@ -7,6 +7,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { HiOutlineUser } from "react-icons/hi";
 import { FaPenToSquare, FaDatabase } from "react-icons/fa6";
 import { IoClose, IoMenu } from "react-icons/io5";
+import { LuPhoneCall } from "react-icons/lu";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -29,7 +30,8 @@ const Navbar = () => {
   const navLinks = [
     { name: "HOME", path: "/", icon: IoHomeOutline },
     { name: "ABOUT", path: "/about", icon: HiOutlineUser },
-    { name: "PROJECTS", path: "/projects", icon: FaDatabase },
+    { name: "WORK", path: "/projects", icon: FaDatabase },
+    { name: "CONTACT", path: "/contact", icon: LuPhoneCall },
   ];
 
   // Animation variants
