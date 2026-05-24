@@ -84,7 +84,7 @@ const ProjectCard = ({ project }) => {
 
           {/* Dark Overlay */}
           <motion.div
-            className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
+            className="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent"
             variants={overlayVariants}
             initial="initial"
             whileHover="hover"
@@ -155,7 +155,7 @@ const ProjectCard = ({ project }) => {
                 variants={techVariants}
                 initial="initial"
                 whileHover="hover"
-                className="text-xs text-cyan-600 bg-gradient-to-r from-cyan-50 to-blue-50 px-2.5 py-1 rounded-lg font-medium"
+                className="text-xs text-cyan-600 bg-linear-to-r from-cyan-50 to-blue-50 px-2.5 py-1 rounded-lg font-medium"
               >
                 {techstack}
               </motion.span>
