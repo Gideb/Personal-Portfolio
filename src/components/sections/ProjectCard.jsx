@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BsArrowUpRightSquare } from "react-icons/bs";
@@ -6,6 +7,7 @@ import { FaEye } from "react-icons/fa6";
 import { HiOutlineSparkles } from "react-icons/hi";
 
 const ProjectCard = ({ project }) => {
+  // eslint-disable-next-line no-unused-vars
   const [isHovered, setIsHovered] = useState(false);
 
   // Animation variants

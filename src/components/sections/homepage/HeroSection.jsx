@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
@@ -8,7 +9,7 @@ import Button from "../../ui/Button";
 import { FaPenToSquare, FaCode, FaVideo } from "react-icons/fa6";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import Subheading from "../../Props/Subheading";
-import profileImage from "../../../assets/images/profile.jpeg"; 
+import profileImage from "../../../assets/images/profile.jpeg";
 
 const HeroSection = () => {
   const { ref: statsRef } = useInView({
@@ -137,7 +138,7 @@ const HeroSection = () => {
             <motion.div variants={itemVariants}>
               <Topic
                 icon={HiOutlineSparkles}
-                topic="Software Engineer & Creative Visual Storyteller"
+                topic="Software Engineer & Visual Storyteller"
                 variant="bg"
               />
             </motion.div>
@@ -176,22 +177,10 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button
-                  buttonText="View Code Projects"
+                  buttonText="Explore Projects"
                   icon={FaProjectDiagram}
                   path="/projects"
                   variant="cyan"
-                />
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  buttonText="View Creative Work"
-                  icon={FaCamera}
-                  path="/creative"
-                  variant="secondary"
                 />
               </motion.div>
 
@@ -284,7 +273,7 @@ const HeroSection = () => {
               {/* Image container with border gradient */}
               <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-112.5 lg:h-112.5 rounded-full p-1 bg-linear-to-r from-cyan-500 via-blue-500 to-purple-600">
                 <div className="w-full h-full rounded-full overflow-hidden bg-gray-100">
-                 {/*  <img
+                  {/*  <img
                     src={profileImage}
                     alt="Gilbert - Software Engineer & Creative Visual Storyteller"
                     className="w-full h-full object-cover object-center"

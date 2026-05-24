@@ -1,10 +1,11 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { HiOutlineSparkles, HiOutlinePhotograph } from "react-icons/hi";
 import { FaCode, FaCamera, FaPalette, FaRocket } from "react-icons/fa";
 import Subheading from "../../Props/Subheading";
 import Topic from "../../Props/Topic";
-import { LuUser, LuBrain, LuHeart } from "react-icons/lu";
+import { LuUser, LuBrain, LuHeart, LuCodeXml } from "react-icons/lu";
 import profileImage from "../../../assets/images/profile.jpeg"; // Add your image
 
 const AboutMe = () => {
@@ -42,13 +43,18 @@ const AboutMe = () => {
 
   const stats = [
     { value: "7+", label: "Years Experience", icon: FaRocket, color: "cyan" },
-    { value: "40+", label: "Projects Completed", icon: FaCode, color: "blue" },
+    {
+      value: "40+",
+      label: "Projects Completed",
+      icon: LuCodeXml,
+      color: "indigo",
+    },
     { value: "50+", label: "Creative Pieces", icon: FaCamera, color: "purple" },
     { value: "30+", label: "Happy Clients", icon: LuHeart, color: "pink" },
   ];
 
   return (
-    <section className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-20 w-full overflow-hidden">
+    <section className="bg-linear-to-br from-gray-900 via-slate-900 to-gray-900 py-20 w-full overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto z-10 mt-10 px-4 lg:px-7 py-10 items-center my-5"
         variants={containerVariants}
@@ -67,7 +73,7 @@ const AboutMe = () => {
               className="max-w-3xl text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white"
             >
               Creative Developer &{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600">
                 Visual Storyteller
               </span>
             </motion.h2>
@@ -97,7 +103,7 @@ const AboutMe = () => {
             className="flex-1 flex justify-center items-center"
           >
             <div className="relative">
-              {/* Animated gradient ring */}
+              {/* Animated linear ring */}
               <motion.div
                 animate={{
                   rotate: 360,
@@ -107,11 +113,11 @@ const AboutMe = () => {
                   repeat: Infinity,
                   ease: "linear",
                 }}
-                className="absolute -inset-4 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 opacity-30 blur-xl"
+                className="absolute -inset-4 rounded-full bg-linear-to-r from-cyan-500 via-blue-500 to-purple-600 opacity-30 blur-xl"
               />
 
               {/* Photo Container */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl p-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 shadow-2xl">
+              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl p-1 bg-linear-to-r from-cyan-500 via-blue-500 to-purple-600 shadow-2xl">
                 <div className="w-full h-full rounded-2xl overflow-hidden bg-gray-800">
                   <img
                     src={profileImage}
@@ -129,7 +135,7 @@ const AboutMe = () => {
                   repeat: Infinity,
                   repeatType: "reverse",
                 }}
-                className="absolute -top-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-500 px-3 py-1.5 rounded-full shadow-lg"
+                className="absolute -top-4 -right-4 bg-linear-to-r from-cyan-500 to-blue-500 px-3 py-1.5 rounded-full shadow-lg"
               >
                 <span className="text-white text-xs font-semibold">Code</span>
               </motion.div>
@@ -142,7 +148,7 @@ const AboutMe = () => {
                   repeatType: "reverse",
                   delay: 1,
                 }}
-                className="absolute -bottom-4 -left-4 bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1.5 rounded-full shadow-lg"
+                className="absolute -bottom-4 -left-4 bg-linear-to-r from-purple-500 to-pink-500 px-3 py-1.5 rounded-full shadow-lg"
               >
                 <span className="text-white text-xs font-semibold">
                   Creative
@@ -164,9 +170,9 @@ const AboutMe = () => {
               className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/50 transition-all duration-300"
             >
               <div
-                className={`inline-flex p-3 rounded-xl bg-gradient-to-br from-${stat.color}-500/20 to-${stat.color}-600/20 mb-3`}
+                className={`inline-flex p-3 rounded-xl bg-${stat.color}-900 mb-3`}
               >
-                <stat.icon className={`text-2xl text-${stat.color}-400`} />
+                <stat.icon className={`text-2xl text-white`} />
               </div>
               <p className="text-2xl md:text-3xl font-bold text-white">
                 {stat.value}
@@ -185,7 +191,7 @@ const AboutMe = () => {
         >
           <motion.div
             whileHover={{ y: -5 }}
-            className="p-6 rounded-2xl bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"
+            className="p-6 rounded-2xl bg-linear-to-br from-cyan-900/30 to-blue-900/30 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-cyan-500/20">
@@ -201,7 +207,7 @@ const AboutMe = () => {
 
           <motion.div
             whileHover={{ y: -5 }}
-            className="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+            className="p-6 rounded-2xl bg-linear-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-purple-500/20">
@@ -222,7 +228,7 @@ const AboutMe = () => {
         <motion.div variants={itemVariants} className="pt-8 text-center">
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="inline-block p-6 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-white/10"
+            className="inline-block p-6 rounded-2xl bg-linear-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-white/10"
           >
             <HiOutlineSparkles className="text-cyan-400 text-2xl mx-auto mb-3" />
             <p className="text-gray-300 italic max-w-2xl">

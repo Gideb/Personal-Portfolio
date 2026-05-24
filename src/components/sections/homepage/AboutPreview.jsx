@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaCode, FaUserAstronaut } from "react-icons/fa6";
 import { HiOutlineSparkles } from "react-icons/hi";

@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink, Link } from "react-router-dom";
-import image from "../../assets/images/logo.png";
+import image from "../../assets/images/logos.png";
 import { IoHomeOutline } from "react-icons/io5";
 import { HiOutlineUser } from "react-icons/hi";
 import { FaPenToSquare, FaDatabase } from "react-icons/fa6";

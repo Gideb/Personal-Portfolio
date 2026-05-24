@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ProjectCard from "../components/sections/ProjectCard";
 import projects from "../data/projects";
 import CTASection from "../components/Props/CTASection";
@@ -6,10 +6,27 @@ import Heading from "../components/Props/Heading";
 import Subheading from "../components/Props/Subheading";
 import Topic from "../components/Props/Topic";
 import { FaFolder, FaFolderOpen } from "react-icons/fa6";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [isMobile, setIsMobile] = useState(false);
+  const hasMounted = useRef(false);
+
+  // Prevent duplicate mounting
+  useEffect(() => {
+    if (hasMounted.current) return;
+    hasMounted.current = true;
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // project Categories
   const categories = [
@@ -69,32 +86,15 @@ const Projects = () => {
     },
   };
 
-  const categoryVariants = {
-    initial: { opacity: 0, x: -20 },
-    animate: { opacity: 1, x: 0 },
-    hover: {
-      scale: 1.02,
-      x: 5,
-      transition: { duration: 0.2 },
-    },
-    tap: { scale: 0.98 },
-  };
-
-  const folderIconVariants = {
-    initial: { rotate: 0 },
-    hover: {
-      rotate: [0, -10, 10, -5, 5, 0],
-      transition: { duration: 0.5 },
-    },
-  };
+  // Don't render anything until mobile detection is complete
+  if (isMobile === undefined) return null;
 
   return (
     <motion.div
-      className="w-full mt-20 py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50"
+      className="w-full mt-20 py-20 bg-linear-to-br from-gray-50 via-white to-gray-50 relative"
       variants={sectionVariants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      animate="visible"
     >
       <div className="max-w-7xl mx-auto mt-10 px-4 lg:px-7 py-10 items-center my-5 space-y-10">
         {/* Header Section */}
@@ -116,8 +116,10 @@ const Projects = () => {
               variants={projectsContainerVariants}
               initial="hidden"
               animate="visible"
+              // Prevent pointer event blocking
+              style={{ pointerEvents: "auto" }}
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={selectedCategory}
                   initial={{ opacity: 0, y: 20 }}
@@ -129,10 +131,16 @@ const Projects = () => {
                   {filteredProjects.length > 0 ? (
                     filteredProjects.map((project, index) => (
                       <motion.div
-                        key={project.id}
+                        key={`${project.id}-${selectedCategory}`}
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.05, duration: 0.4 }}
+                        // Ensure unique keys and proper stacking
+                        style={{
+                          position: "relative",
+                          zIndex: 1,
+                          pointerEvents: "auto",
+                        }}
                       >
                         <ProjectCard project={project} />
                       </motion.div>
@@ -156,13 +164,14 @@ const Projects = () => {
             <motion.div
               className="lg:col-span-1 order-1 lg:order-2"
               variants={sidebarVariants}
+              style={{ pointerEvents: "auto", zIndex: 2 }}
             >
               <motion.div
-                whileHover={{ y: -5 }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 sticky top-24"
+                whileHover={!isMobile ? { y: -5 } : {}}
+                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 lg:sticky lg:top-24"
               >
                 <motion.h3
-                  className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4"
+                  className="text-xl font-bold bg-linear-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                 >
@@ -173,11 +182,10 @@ const Projects = () => {
                   {categories.map((category) => (
                     <motion.li
                       key={category.id}
-                      variants={categoryVariants}
-                      initial="initial"
-                      animate="animate"
-                      whileHover="hover"
-                      whileTap="tap"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      whileHover={!isMobile ? { scale: 1.02, x: 5 } : {}}
+                      whileTap={{ scale: 0.98 }}
                       transition={{
                         delay: categories.indexOf(category) * 0.03,
                       }}
@@ -186,22 +194,16 @@ const Projects = () => {
                         onClick={() => setSelectedCategory(category.id)}
                         className={`w-full flex items-center justify-between p-3 rounded-xl transition-all duration-300 ${
                           selectedCategory === category.id
-                            ? "bg-gradient-to-r from-cyan-50 to-blue-50 text-cyan-600 shadow-sm"
+                            ? "bg-linear-to-r from-cyan-50 to-blue-50 text-cyan-600 shadow-sm"
                             : "hover:bg-gray-50 text-gray-700 hover:text-cyan-600"
                         }`}
                       >
-                        <span className="flex items-center gap-3 font-medium">
-                          <motion.div
-                            variants={folderIconVariants}
-                            initial="initial"
-                            whileHover="hover"
-                          >
-                            {selectedCategory === category.id ? (
-                              <FaFolderOpen className="text-cyan-500 text-lg" />
-                            ) : (
-                              <FaFolder className="text-gray-400 group-hover:text-cyan-400 text-lg" />
-                            )}
-                          </motion.div>
+                        <span className="flex items-center gap-3 font-medium group">
+                          {selectedCategory === category.id ? (
+                            <FaFolderOpen className="text-cyan-500 text-lg" />
+                          ) : (
+                            <FaFolder className="text-gray-400 group-hover:text-cyan-400 text-lg" />
+                          )}
                           {category.name}
                         </span>
 
@@ -209,7 +211,7 @@ const Projects = () => {
                           <motion.span
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
-                            className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
+                            className="w-2 h-2 bg-linear-to-r from-cyan-500 to-blue-500 rounded-full"
                           />
                         )}
                       </button>
@@ -235,7 +237,7 @@ const Projects = () => {
                         width: `${(filteredProjects.length / projects.length) * 100}%`,
                       }}
                       transition={{ duration: 0.5, delay: 0.4 }}
-                      className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
+                      className="h-full bg-linear-to-r from-cyan-500 to-blue-500 rounded-full"
                     />
                   </div>
                 </motion.div>

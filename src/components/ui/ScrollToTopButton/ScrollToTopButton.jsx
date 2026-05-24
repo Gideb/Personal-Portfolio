@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
@@ -45,7 +46,7 @@ const ScrollToTopButton = () => {
             background: `conic-gradient(white ${scrollProgress * 360}deg, #fdc731 ${scrollProgress * 360}deg)`,
           }}
         >
-          <div class="arrow">
+          <div className="arrow">
             <FaArrowUp size={16} />
           </div>
         </motion.button>

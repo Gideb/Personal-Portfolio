@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { HiOutlineSparkles, HiOutlineMail } from "react-icons/hi";
 import { LuPhoneCall, LuClock, LuMapPin } from "react-icons/lu";
@@ -85,7 +86,7 @@ const ContactHero = () => {
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-0 right-0 w-96 h-96 bg-linear-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl pointer-events-none"
       />
       <motion.div
         animate={{
@@ -98,7 +99,7 @@ const ContactHero = () => {
           repeatType: "reverse",
           delay: 1,
         }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-white/20 to-pink-500/20 rounded-full blur-3xl pointer-events-none"
+        className="absolute bottom-0 left-0 w-96 h-96 bg-linear-to-r from-white/20 to-pink-500/20 rounded-full blur-3xl pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-7 mt-20">

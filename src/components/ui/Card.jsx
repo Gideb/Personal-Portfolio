@@ -1,6 +1,7 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-
+// eslint-disable-next-line no-unused-vars
 const Card = ({ key, title, icon: Icon, description, color, platform }) => {
   const colorClasses = {
     pink: {

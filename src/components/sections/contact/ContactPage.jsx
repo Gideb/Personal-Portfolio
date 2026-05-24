@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import Heading from "../../Props/Heading";
 import Topic from "../../Props/Topic";
@@ -230,6 +231,7 @@ const ContactPage = () => {
                 className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 transition-all duration-300 outline-none"
                 type="text"
                 placeholder="Your Full Name"
+                id="fullname"
               />
             </motion.div>
 
@@ -244,6 +246,7 @@ const ContactPage = () => {
                 className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 transition-all duration-300 outline-none"
                 type="email"
                 placeholder="you@company.com"
+                id="email"
               />
             </motion.div>
 
@@ -258,6 +261,7 @@ const ContactPage = () => {
                 className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 transition-all duration-300 outline-none"
                 type="tel"
                 placeholder="+233 20 123 4567"
+                id="phone"
               />
             </motion.div>
 
@@ -272,6 +276,7 @@ const ContactPage = () => {
                 className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 transition-all duration-300 outline-none"
                 type="text"
                 placeholder="Your Company Ltd"
+                id="company"
               />
             </motion.div>
 
@@ -287,6 +292,7 @@ const ContactPage = () => {
                 name="text"
                 placeholder="Tell us about your needs..."
                 rows={5}
+                id="message"
               ></textarea>
             </motion.div>
 

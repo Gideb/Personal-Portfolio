@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import Topic from "../../Props/Topic";
 import Heading from "../../Props/Heading";
@@ -113,6 +114,7 @@ const FeaturedProjects = () => {
           variants={projectsContainerVariants}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
         >
+          
           {projects.slice(0, 4).map((project, index) => (
             <motion.div
               key={project.id}

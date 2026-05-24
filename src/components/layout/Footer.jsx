@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
@@ -9,8 +10,8 @@ const Footer = () => {
   const navLinks = [
     { name: "HOME", path: "/" },
     { name: "ABOUT", path: "/about" },
+    { name: "WORK", path: "/projects" },
     { name: "CONTACT", path: "/contact" },
-    { name: "PROJECTS", path: "/projects" },
   ];
 
   // Animation variants

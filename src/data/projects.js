@@ -10,6 +10,7 @@ import notesApp from "../assets/images/project/project-notes-app.jpg";
 import codeuni from "../assets/images/project/project-codeuni.jpg";
 import tutorPortal from "../assets/images/project/project-tutorPortal.png";
 import luxebeauty from "../assets/images/project/project-luxebeauty.jpg";
+import klass from "../assets/images/project/project-klass.jpg";
 
 const projects = [
   {
@@ -485,6 +486,44 @@ const projects = [
     liveDemo: "https://codeuni-university-demo.com",
     year: "2023",
     featured: false,
+  },
+  {
+    id: 13,
+    slug: "klasskoncept-website",
+    title: "Klass Koncept Agency Website",
+    description:
+      "A modern, fully responsive Agency website showcasing a full spectrum of programming programs at every level — from beginner coding foundations to advanced software engineering degrees.",
+    image: klass,
+    category: "Web Development",
+    tech: ["React", "Next.js 14", "Tailwind CSS", "Framer Motion", "Vercel"],
+    overview:
+      "A flagship institutional website for Codeuni — a modern programming university. The platform features program catalogs, faculty profiles, dynamic admissions portals, event calendars, and student dashboards. Designed to convert prospective students while serving current enrollees with course materials and grade access.",
+    problem:
+      "Traditional university websites feel dated, hard to navigate, and fail to attract tech-savvy students. Codeuni needed a digital presence that reflects its cutting-edge curriculum — fast, visual, mobile-first, and built with the very technologies it teaches. The old site had 47% bounce rate and abysmal mobile performance.",
+    solution:
+      "I built a Next.js application with server-side rendering for SEO and instant page loads. The design uses bold typography, dark/light modes, and micro-interactions that signal 'modern tech.' A headless CMS allows admissions staff to update program details without touching code. Program pages feature curriculum previews, career outcomes, tuition tools, and alumni testimonials.",
+    features: [
+      "Hero section with animated code typing effect (rotating through: 'Python', 'React', 'Rust', 'AI')",
+      "Program catalog: 15+ degrees (BSc, MSc, Diploma, Certificates) filterable by level, duration, or format (online/on-campus/hybrid)",
+      "Individual program pages with: curriculum breakdown, learning outcomes, instructors, tuition calculator, application deadline countdown",
+      "Faculty directory with search, research interests, and office hours booking",
+      "Student portal: course enrollment, grade viewer, assignment submission, attendance tracker",
+      "Virtual campus tour (360° photos + embedded walkthrough videos)",
+      "Events & hackathon calendar with RSVP functionality",
+      "Admissions workflow: online application, document upload, status tracking, offer letter generation",
+      "Blog/News section: student spotlights, industry partnerships, research breakthroughs",
+      "Full accessibility (WCAG 2.1 AA compliant) and responsive design (mobile-first)",
+      "Real-time chat widget for prospective student inquiries",
+      "Analytics dashboard for admin: application funnels, page performance, user demographics",
+    ],
+    challenges:
+      "Balancing rich visual design with performance was critical — heavy animations on program cards caused layout shifts. I solved this by using Next.js image optimization and CSS transforms instead of JavaScript-driven animations. Also, the admissions workflow required secure document uploads (PDF, images) with virus scanning, which I implemented using AWS S3 + Lambda checks.",
+    learned:
+      "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
+    github: "https://github.com/gideb/codeuni-website",
+    liveDemo: "https://codeuni-university-demo.com",
+    year: "2023",
+    featured: true,
   },
 ];
 

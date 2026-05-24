@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaPen } from "react-icons/fa";
 import Card from "../../ui/Card";
@@ -8,7 +9,7 @@ import Subheading from "../../Props/Subheading";
 import { BsJavascript } from "react-icons/bs";
 import { FaCss3Alt, FaNodeJs, FaPhp, FaReact } from "react-icons/fa6";
 import { TbBrandTypescript } from "react-icons/tb";
-import { SiTailwindcss, SiFigma,  } from "react-icons/si";
+import { SiTailwindcss, SiFigma } from "react-icons/si";
 import { GiCrystalBars } from "react-icons/gi";
 
 const SkillsPreview = () => {
@@ -25,14 +26,14 @@ const SkillsPreview = () => {
       description: "ES6+, async, the DOM",
       icon: BsJavascript,
       color: "amber",
-      proficiency: 85,
+      proficiency: 87,
     },
     {
       title: "React",
       description: "Hooks, Router, Context",
       icon: FaReact,
       color: "cyan",
-      proficiency: 88,
+      proficiency: 89,
     },
     {
       title: "TypeScript",
@@ -53,7 +54,7 @@ const SkillsPreview = () => {
       description: "Figma, Wireframing, Prototyping",
       icon: SiFigma,
       color: "purple",
-      proficiency: 75,
+      proficiency: 85,
     },
   ];
 
