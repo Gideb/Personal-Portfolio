@@ -228,18 +228,23 @@ const CaseStudy = () => {
               variants={headerVariants}
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
-              <Button
-                buttonText="Live Demo"
-                icon={FaRecordVinyl}
-                path="."
-                variant="cyan"
-              />
-              <Button
-                buttonText="GitHub Repository"
-                icon={FaGithub}
-                path=".github"
-                variant="primary"
-              />
+              {project.liveDemo && (
+                <Button
+                  buttonText="Live Demo"
+                  icon={FaRecordVinyl}
+                  path={project.liveDemo}
+                  variant="cyan"
+                />
+              )}
+
+              {project.github && (
+                <Button
+                  buttonText="GitHub Repository"
+                  icon={FaGithub}
+                  path={project.github}
+                  variant="primary"
+                />
+              )}
             </motion.div>
 
             {/* Hero Image */}

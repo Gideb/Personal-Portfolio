@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const Button = ({ path, buttonText, icon: Icon, variant = "primary" }) => {
@@ -17,7 +16,6 @@ const Button = ({ path, buttonText, icon: Icon, variant = "primary" }) => {
       "text-gray-700 bg-white border-2 border-gray-200 hover:border-cyan-500 hover:text-cyan-600 hover:shadow-cyan-500/10",
   };
 
-  // Animation variants
   const buttonVariants = {
     initial: { scale: 1 },
     hover: {
@@ -54,6 +52,26 @@ const Button = ({ path, buttonText, icon: Icon, variant = "primary" }) => {
     },
   };
 
+  const isExternal = /^https?:\/\//i.test(path || "");
+
+  const className = `${base} ${styles[variant] || styles.primary} group`;
+
+  const content = (
+    <>
+      <span>{buttonText}</span>
+
+      {Icon && (
+        <motion.div
+          variants={iconVariants}
+          initial="initial"
+          whileHover="hover"
+        >
+          <Icon className="text-sm" />
+        </motion.div>
+      )}
+    </>
+  );
+
   return (
     <motion.div
       variants={buttonVariants}
@@ -61,19 +79,20 @@ const Button = ({ path, buttonText, icon: Icon, variant = "primary" }) => {
       whileHover="hover"
       whileTap="tap"
     >
-      <Link to={path} className={`${base} ${styles[variant]} group`}>
-        <span> {buttonText}</span>
-
-        {Icon && (
-          <motion.div
-            variants={iconVariants}
-            initial="initial"
-            whileHover="hover"
-          >
-            <Icon className="text-sm" />
-          </motion.div>
-        )}
-      </Link>
+      {isExternal ? (
+        <a
+          href={path}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={className}
+        >
+          {content}
+        </a>
+      ) : (
+        <Link to={path || "/"} className={className}>
+          {content}
+        </Link>
+      )}
     </motion.div>
   );
 };

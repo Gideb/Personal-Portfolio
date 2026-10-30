@@ -20,7 +20,7 @@ const projects = [
     description:
       "A RESTful backend for managing personal finances with user authentication, income/expense tracking, and spending analytics.",
     image: expensetracker,
-    category: "Web Development",
+    category: "Web Application",
     tech: ["Node.js", "Express", "MongoDB", "JWT", "Mongoose"],
     overview:
       "This API allows users to register, log in, add transactions (income/expense), categorize them, and retrieve summaries like monthly spending or budget vs. actual reports.",
@@ -56,7 +56,7 @@ const projects = [
       "A full-stack MERN application where users can create, edit, organize, and share notes with others in real-time.",
     image: notesapp,
     category: "Web Application",
-    tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "Tailwind"],
+    tech: ["MongoDB", "Express", "React", "Node.js", "JWT", "Tailwind"],
     overview:
       "This is a complete note-taking platform with markdown support, tags, search, and real-time collaboration. Users can share notes with view or edit permissions.",
     problem:
