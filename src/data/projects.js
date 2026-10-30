@@ -42,11 +42,12 @@ const projects = [
       "Designing efficient MongoDB aggregation pipelines for spending summaries (e.g., total by category per month) was challenging. I optimized queries with indexes and pre-aggregated fields.",
     learned:
       "I deepened my knowledge of authentication/authorization, database indexing, and RESTful API design. I also learned to write unit tests with Jest and Supertest.",
-    github: "https://github.com/gideb/expense-tracker-api",
-    liveDemo: "https://gideb-expensetraacker.vercel.app",
+    github: "https://github.com/gideb/EXPENSETRACKER",
+    liveDemo: "https://gideb-expensetracker.vercel.app",
     year: "2026",
     featured: true,
   },
+
   {
     id: 2,
     slug: "notes-app",
@@ -82,6 +83,7 @@ const projects = [
     year: "2026",
     featured: true,
   },
+
   {
     id: 3,
     slug: "klasskoncept-website",
@@ -126,6 +128,7 @@ const projects = [
     year: "2024",
     featured: true,
   },
+
   {
     id: 4,
     slug: "codeuni-website",
