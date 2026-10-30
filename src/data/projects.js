@@ -7,123 +7,12 @@ import urlShortener from "../assets/images/project/project-url-shortener.jpg";
 import uiDesign from "../assets/images/project/project-ui-design.jpg";
 import expensetracker from "../assets/images/project/project-expensetracker.png";
 import notesapp from "../assets/images/project/project-notesapp.png";
-import codeuni from "../assets/images/project/project-codeuni.png";
+import codeuni from "../assets/images/project/project-codeuni.jpg";
 import tutorPortal from "../assets/images/project/project-tutorPortal.png";
 import luxebeauty from "../assets/images/project/project-luxebeauty.jpg";
 import klass from "../assets/images/project/project-klass.jpg";
 
 const projects = [
-  {
-    id: 12,
-    slug: "social-media-dashboard",
-    title: "Social Media Analytics Dashboard",
-    description:
-      "A full-stack dashboard that aggregates and visualizes social media metrics from multiple platforms in one place.",
-    image: socialMedia,
-    category: "Web Application",
-    tech: [
-      "MongoDB",
-      "Express",
-      "React",
-      "Node.js",
-      "Chart.js",
-      "Passport.js",
-      "Socket.io",
-    ],
-    overview:
-      "This platform connects to Twitter, Instagram, and Facebook APIs to pull engagement metrics (likes, shares, comments, reach) and displays them in customizable dashboards with real-time updates and team collaboration features.",
-    problem:
-      "Social media managers waste time switching between platforms to track performance. I wanted a unified dashboard that centralizes analytics, saves time, and provides actionable insights.",
-    solution:
-      "I built a MERN stack app with OAuth authentication via Passport.js for each social platform. Data is fetched via scheduled cron jobs and stored in MongoDB. Socket.io pushes live updates when new posts are published. Charts and graphs visualize trends over time.",
-    features: [
-      "Connect multiple social accounts (Twitter, Instagram, Facebook, LinkedIn)",
-      "Aggregated metrics: total engagement, follower growth, top posts",
-      "Customizable dashboard with drag-and-drop widgets",
-      "Real-time notifications when metrics change",
-      "Post scheduling with calendar view",
-      "Team collaboration: share dashboards with read/write roles",
-      "Export reports as PDF or CSV",
-      "Compare performance across platforms and date ranges",
-      "Hashtag tracking and sentiment analysis",
-      "Dark/light theme with responsive design for mobile access",
-    ],
-    challenges:
-      "Handling API rate limits and different data structures across platforms was complex. I implemented a unified data schema and a queue system (Bull + Redis) to stagger API calls and retry failed requests gracefully.",
-    learned:
-      "I mastered OAuth flows for multiple providers, cron job scheduling with node-cron, real-time updates with WebSockets, and complex data aggregation from disparate sources. I also improved my charting and PDF generation skills.",
-    github: "https://github.com/gideb/#",
-    liveDemo: "#",
-    featured: true,
-    year: 2025,
-  },
-
-  {
-    id: 15,
-    slug: "weather-dashboard",
-    title: "Weather Dashboard",
-    description:
-      "A real-time weather dashboard that displays current conditions and 5-day forecasts for any city worldwide.",
-    image: weatherApp,
-    category: "Web Development",
-    tech: ["React", "OpenWeather API", "Axios", "CSS Modules"],
-    overview:
-      "This web app fetches live weather data from the OpenWeather API and presents it in an intuitive dashboard with dynamic icons, temperature toggles (°C/°F), and search history.",
-    problem:
-      "Weather data can be overwhelming in raw API format. I wanted to create a clean, user-friendly interface that makes checking the weather quick and visually appealing.",
-    solution:
-      "I built a React app that consumes the OpenWeather API, manages loading/error states gracefully, stores recent searches in localStorage, and displays both current and forecast data in a card-based layout.",
-    features: [
-      "City search with autocomplete",
-      "Current temperature, humidity, wind speed, and conditions",
-      "5-day forecast with 3-hour intervals",
-      "Toggle between Celsius and Fahrenheit",
-      "Recent search history",
-      "Background gradients that change based on weather condition",
-      "Fully responsive design",
-    ],
-    challenges:
-      "Handling API rate limits and asynchronous data fetching while maintaining a smooth UX was tricky. I implemented debounced search and loading skeletons to improve perceived performance.",
-    learned:
-      "I gained experience working with third-party APIs, managing asynchronous state with useEffect and useState, and implementing client-side caching with localStorage.",
-    github: "https://github.com/gideb/#",
-    liveDemo: "#",
-    year: "2024",
-    featured: true,
-  },
-  {
-    id: 3,
-    slug: "ui-design-system",
-    title: "UI Component Library",
-    description:
-      "A reusable component library with buttons, modals, forms, and cards, built as a living style guide.",
-    image: uiDesign,
-    category: "Web Application",
-    tech: ["React", "Storybook", "Styled Components", "TypeScript"],
-    overview:
-      "This project is a production-ready component library designed for consistency across applications. It includes dark mode support, accessibility features, and full documentation.",
-    problem:
-      "Many projects suffer from inconsistent UI because components are built from scratch each time. I wanted a scalable, documented system to speed up development and maintain design consistency.",
-    solution:
-      "I built a component library with Storybook for live documentation, TypeScript for type safety, and Styled Components for scoped theming. Components support props for variants (primary, secondary, danger) and sizes.",
-    features: [
-      "Button, Input, Modal, Card, and Toast components",
-      "Dark/light theme toggle",
-      "Responsive breakpoint utilities",
-      "Form validation hooks",
-      "Accessibility (ARIA labels, keyboard navigation)",
-      "Storybook documentation with interactive examples",
-      "Tree-shakable exports",
-    ],
-    challenges:
-      "Ensuring components were truly reusable without too many props (prop drilling) led me to adopt React Context for theming and a compound component pattern for complex elements like modals.",
-    learned:
-      "I learned advanced TypeScript patterns, component composition techniques, and how to publish a package to npm. I also improved my understanding of accessibility standards (WCAG).",
-    github: "https://github.com/gideb/#",
-    liveDemo: "#",
-    year: "2023",
-    featured: false,
-  },
   {
     id: 1,
     slug: "expense-tracker-api",
@@ -194,162 +83,99 @@ const projects = [
     featured: true,
   },
   {
-    id: 6,
-    slug: "task-manager-mobile",
-    title: "Task Manager Mobile App",
+    id: 3,
+    slug: "klasskoncept-website",
+    title: "Klass Koncepts – Agency Website",
     description:
-      "A cross-platform mobile app for managing daily tasks with reminders, categories, and offline support.",
-    image: taskManager,
-    category: "Mobile Application",
-    tech: [
-      "React Native",
-      "Expo",
-      "SQLite",
-      "React Navigation",
-      "Push Notifications",
-    ],
-    overview:
-      "This app helps users organize tasks by project, set due dates and priorities, receive reminders, and sync data locally when offline.",
-    problem:
-      "Many task apps require constant internet and have cluttered interfaces. I wanted a simple, offline-first mobile experience with native-like performance.",
-    solution:
-      "I built with React Native and Expo, using SQLite for local storage and AsyncStorage for settings. Push notifications are handled via Expo's notification service. The UI follows Material Design guidelines.",
-    features: [
-      "Create, edit, delete, and complete tasks",
-      "Set due dates, priorities (High/Medium/Low), and repeat intervals",
-      "Organize tasks by projects/categories",
-      "Push notifications for upcoming due tasks",
-      "Offline-first: all data stored locally, optional cloud backup",
-      "Search and filter (by date, priority, project)",
-      "Dark/light theme",
-      "Home screen widget (Android)",
-      "Biometric authentication for app lock",
-    ],
-    challenges:
-      "Managing local database schema migrations and syncing with a future cloud backend required careful planning. I implemented a versioned SQLite schema and a sync queue.",
-    learned:
-      "I learned mobile-specific patterns like navigation stacks, native modules, push notification setup, and offline storage strategies. I also tested on both iOS and Android simulators.",
-    github: "https://github.com/gideb/#",
-    liveDemo: "#",
-    year: "2026",
-    featured: false,
-  },
-  {
-    id: 7,
-    slug: "fitness-tracker",
-    title: "Fitness Tracker App",
-    description:
-      "A full-stack mobile app that logs workouts, tracks progress with charts, and provides personalized exercise recommendations.",
-    image: fitnessTracker,
-    category: "Mobile Application",
-    tech: [
-      "React Native",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Victory Native (charts)",
-      "JWT",
-    ],
-    overview:
-      "This app allows users to record workouts (sets, reps, weight), view historical progress with graphs, set goals, and receive workout suggestions based on past performance.",
-    problem:
-      "Gym-goers often lack structured tracking. I wanted an app that makes logging workouts fast and provides visual feedback on progress over time.",
-    solution:
-      "I built a React Native frontend connected to a Node.js/Express/MongoDB backend. Workouts are stored in the cloud and synced across devices. Charts visualize strength gains and volume trends.",
-    features: [
-      "User authentication (JWT, refresh tokens)",
-      "Exercise library with custom exercise creation",
-      "Log workouts: sets, reps, weight, duration",
-      "Progress charts (1RM, total volume over time)",
-      "Set personal goals (e.g., squat 100kg by date)",
-      "Workout templates and history",
-      "REST API for syncing data",
-      "Offline logging with background sync",
-      "Push reminders for workout days",
-    ],
-    challenges:
-      "Calculating 1-rep max trends from historical logs and displaying them on zoomable charts required efficient data aggregation on the backend and smooth rendering on mobile.",
-    learned:
-      "I improved my backend aggregation skills (MongoDB pipelines for time-series data) and learned charting libraries in React Native. I also implemented secure token refresh flows.",
-    github: "https://github.com/gideb/#",
-    liveDemo: "#",
-    year: "2020",
-    featured: false,
-  },
-  {
-    id: 8,
-    slug: "ecommerce-product-page",
-    title: "E-Commerce Product Page",
-    description:
-      "A fully responsive product page with image gallery, variant selection, cart management, and local storage persistence.",
+      "A modern, responsive website for Klass Koncepts, designed to establish a strong digital presence through a clean visual identity, elegant layouts, and engaging user experiences.",
 
-    image: ecommmerce,
-    category: "Mobile Application",
-    tech: ["React", "Context API", "Tailwind CSS", "Framer Motion"],
-    overview:
-      "This UI component simulates an e-commerce product page, featuring a lightbox gallery, size/color pickers, quantity selector, and a mini-cart with add/remove functionality.",
-    problem:
-      "E-commerce product pages need to be both visually engaging and highly functional. I wanted to build a polished, production-ready component that handles all cart logic.",
-    solution:
-      "I built a React app with Context API for global cart state. The gallery includes thumbnail navigation and a lightbox modal. Cart data persists in localStorage so items survive page refresh.",
-    features: [
-      "Product image gallery with lightbox modal",
-      "Thumbnail carousel",
-      "Variant selection (size, color) with stock validation",
-      "Quantity selector with min/max limits",
-      "Add to cart with micro-interactions (framer motion)",
-      "Mini-cart drawer with item list, quantity updates, and removal",
-      "Cart total calculation",
-      "LocalStorage persistence",
-      "Mobile-first responsive design",
-      "Smooth animations",
-    ],
-    challenges:
-      "Keeping the cart UI in sync across multiple components (product page, mini-cart, header) required careful context design. I used useReducer for complex cart actions (add, remove, update quantity).",
-    learned:
-      "I mastered React Context + useReducer for global state, implemented accessible modal patterns, and improved my animation skills with Framer Motion. I also learned about localStorage hydration.",
-    github: "https://github.com/gideb/#",
-    liveDemo: "#",
-    year: "2021",
-    featured: false,
-  },
-  {
-    id: 9,
-    slug: "url-shortener",
-    title: "URL Shortener Service",
-    description:
-      "A scalable URL shortening service with custom aliases, click tracking, analytics, and expiration dates.",
-    image: urlShortener,
+    image: klass,
     category: "Web Development",
-    tech: ["Node.js", "Express", "PostgreSQL", "Redis", "JWT"],
+    tech: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vercel"],
+
     overview:
-      "This backend service converts long URLs into short codes, redirects users, and tracks clicks (referrer, geolocation, device type). It supports user accounts, custom slugs, and link expiration.",
+      "A modern business website developed for Klass Koncepts, with a focus on creating a professional online presence and communicating the brand's identity. The platform combines a contemporary visual design, intuitive navigation, responsive layouts, and carefully structured content to deliver a seamless browsing experience across desktop, tablet, and mobile devices.",
+
     problem:
-      "Short links are ubiquitous but often lack analytics. I wanted to build a lightweight, high-performance service with detailed click data and user management.",
+      "Businesses need more than just an online presence; they need a website that communicates their identity, establishes credibility, and makes it easy for visitors to understand their offerings. Klass Koncepts needed a modern digital platform that could effectively represent its brand while delivering a visually appealing and accessible experience across different devices.",
+
     solution:
-      "I built a Node.js/Express API with PostgreSQL for persistent storage and Redis for caching short links. Redirects are 301/302 with click logging via background jobs. Users can register to manage their links.",
+      "I designed and developed a responsive React application with a clean, modern interface and a distinctive purple-and-white visual identity. Tailwind CSS was used to create consistent styling and responsive layouts, while Framer Motion adds subtle animations and interactive elements. The overall experience prioritizes clear content presentation, intuitive navigation, visual consistency, and accessibility across screen sizes.",
+
     features: [
-      "Public URL shortening without login",
-      "User accounts: manage, edit, delete custom links",
-      "Custom aliases (e.g., /my-link)",
-      "Click analytics: total clicks, unique clicks, referrers, countries, devices",
-      "Optional link expiration (date or click limit)",
-      "QR code generation for each short link",
-      "Rate limiting per IP",
-      "API keys for programmatic shortening",
-      "Admin dashboard for system stats",
+      "Modern hero section with engaging visual elements and clear brand messaging",
+      "Distinctive purple-and-white visual identity consistent with the brand",
+      "Responsive layouts optimized for desktop, tablet, and mobile devices",
+      "Intuitive navigation for easy access to important website sections",
+      "Well-structured content sections for presenting the brand and its offerings",
+      "Modern typography and carefully balanced spacing for improved readability",
+      "Subtle animations and interactive hover effects using Framer Motion",
+      "Reusable React components for maintainable and scalable development",
+      "Consistent styling and responsive utilities using Tailwind CSS",
+      "Optimized layouts and visual elements for a smooth browsing experience",
+      "Deployed and hosted on Vercel",
     ],
+
     challenges:
-      "Ensuring low-latency redirects while logging analytics without blocking was solved by using Redis as a fast lookup cache and queuing click logs to be batch-written to PostgreSQL.",
+      "One of the key challenges was maintaining a consistent visual identity while ensuring that the interface remained clean and functional across different screen sizes. Achieving the right balance between visual appeal, typography, spacing, and responsiveness required careful attention to the layout. I also focused on implementing animations in a way that enhanced the user experience without making the interface feel overwhelming.",
+
     learned:
-      "I learned about caching strategies (Redis), background job queues (Bull), and database indexing for high-read workloads. I also implemented geolocation from IP addresses using a free API.",
-    github: "https://github.com/gideb/#",
-    liveDemo: "#",
-    year: "2022",
-    featured: false,
+      "This project strengthened my experience in building modern React applications using Vite and Tailwind CSS. I gained practical experience in component-based development, responsive design, visual hierarchy, and animation integration with Framer Motion. It also reinforced the importance of translating a brand's identity into a cohesive digital experience while maintaining clean, reusable, and maintainable code.",
+    github: "https://github.com/gideb/klassite.com",
+    liveDemo: "https://gideb/klasskoncept.vercel.app",
+    year: "2024",
+    featured: true,
   },
   {
-    id: 10,
+    id: 4,
+    slug: "codeuni-website",
+    title: "Codeuni University Website",
+    description:
+      "A modern, fully responsive university website showcasing a full spectrum of programming programs at every level — from beginner coding foundations to advanced software engineering degrees.",
+    image: codeuni,
+    category: "Web Development",
+    tech: [
+      "React",
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Payload CMS",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    overview:
+      "A flagship institutional website for Codeuni — a modern programming university. The platform features program catalogs, faculty profiles, dynamic admissions portals, event calendars, and student dashboards. Designed to convert prospective students while serving current enrollees with course materials and grade access.",
+    problem:
+      "Traditional university websites feel dated, hard to navigate, and fail to attract tech-savvy students. Codeuni needed a digital presence that reflects its cutting-edge curriculum — fast, visual, mobile-first, and built with the very technologies it teaches. The old site had 47% bounce rate and abysmal mobile performance.",
+    solution:
+      "I built a Next.js application with server-side rendering for SEO and instant page loads. The design uses bold typography, dark/light modes, and micro-interactions that signal 'modern tech.' A headless CMS allows admissions staff to update program details without touching code. Program pages feature curriculum previews, career outcomes, tuition tools, and alumni testimonials.",
+    features: [
+      "Hero section with animated code typing effect (rotating through: 'Python', 'React', 'Rust', 'AI')",
+      "Program catalog: 15+ degrees (BSc, MSc, Diploma, Certificates) filterable by level, duration, or format (online/on-campus/hybrid)",
+      "Individual program pages with: curriculum breakdown, learning outcomes, instructors, tuition calculator, application deadline countdown",
+      "Faculty directory with search, research interests, and office hours booking",
+      "Student portal: course enrollment, grade viewer, assignment submission, attendance tracker",
+      "Virtual campus tour (360° photos + embedded walkthrough videos)",
+      "Events & hackathon calendar with RSVP functionality",
+      "Admissions workflow: online application, document upload, status tracking, offer letter generation",
+      "Blog/News section: student spotlights, industry partnerships, research breakthroughs",
+      "Full accessibility (WCAG 2.1 AA compliant) and responsive design (mobile-first)",
+      "Real-time chat widget for prospective student inquiries",
+      "Analytics dashboard for admin: application funnels, page performance, user demographics",
+    ],
+    challenges:
+      "Balancing rich visual design with performance was critical — heavy animations on program cards caused layout shifts. I solved this by using Next.js image optimization and CSS transforms instead of JavaScript-driven animations. Also, the admissions workflow required secure document uploads (PDF, images) with virus scanning, which I implemented using AWS S3 + Lambda checks.",
+    learned:
+      "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
+    github: "https://github.com/gideb/codeUni",
+    liveDemo: "https://codeuni.vercel.app",
+    year: "2023",
+    featured: true,
+  },
+
+  {
+    id: 5,
     slug: "tutor-portal",
     title: "Tutor Portal — Computing Programs for Every Stage",
     description:
@@ -392,7 +218,275 @@ const projects = [
     featured: false,
   },
   {
+    id: 6,
+    slug: "ui-design-system",
+    title: "UI Component Library",
+    description:
+      "A reusable component library with buttons, modals, forms, and cards, built as a living style guide.",
+    image: uiDesign,
+    category: "Web Application",
+    tech: ["React", "Storybook", "Styled Components", "TypeScript"],
+    overview:
+      "This project is a production-ready component library designed for consistency across applications. It includes dark mode support, accessibility features, and full documentation.",
+    problem:
+      "Many projects suffer from inconsistent UI because components are built from scratch each time. I wanted a scalable, documented system to speed up development and maintain design consistency.",
+    solution:
+      "I built a component library with Storybook for live documentation, TypeScript for type safety, and Styled Components for scoped theming. Components support props for variants (primary, secondary, danger) and sizes.",
+    features: [
+      "Button, Input, Modal, Card, and Toast components",
+      "Dark/light theme toggle",
+      "Responsive breakpoint utilities",
+      "Form validation hooks",
+      "Accessibility (ARIA labels, keyboard navigation)",
+      "Storybook documentation with interactive examples",
+      "Tree-shakable exports",
+    ],
+    challenges:
+      "Ensuring components were truly reusable without too many props (prop drilling) led me to adopt React Context for theming and a compound component pattern for complex elements like modals.",
+    learned:
+      "I learned advanced TypeScript patterns, component composition techniques, and how to publish a package to npm. I also improved my understanding of accessibility standards (WCAG).",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
+    year: "2023",
+    featured: false,
+  },
+  {
+    id: 7,
+    slug: "social-media-dashboard",
+    title: "Social Media Analytics Dashboard",
+    description:
+      "A full-stack dashboard that aggregates and visualizes social media metrics from multiple platforms in one place.",
+    image: socialMedia,
+    category: "Web Application",
+    tech: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "Chart.js",
+      "Passport.js",
+      "Socket.io",
+    ],
+    overview:
+      "This platform connects to Twitter, Instagram, and Facebook APIs to pull engagement metrics (likes, shares, comments, reach) and displays them in customizable dashboards with real-time updates and team collaboration features.",
+    problem:
+      "Social media managers waste time switching between platforms to track performance. I wanted a unified dashboard that centralizes analytics, saves time, and provides actionable insights.",
+    solution:
+      "I built a MERN stack app with OAuth authentication via Passport.js for each social platform. Data is fetched via scheduled cron jobs and stored in MongoDB. Socket.io pushes live updates when new posts are published. Charts and graphs visualize trends over time.",
+    features: [
+      "Connect multiple social accounts (Twitter, Instagram, Facebook, LinkedIn)",
+      "Aggregated metrics: total engagement, follower growth, top posts",
+      "Customizable dashboard with drag-and-drop widgets",
+      "Real-time notifications when metrics change",
+      "Post scheduling with calendar view",
+      "Team collaboration: share dashboards with read/write roles",
+      "Export reports as PDF or CSV",
+      "Compare performance across platforms and date ranges",
+      "Hashtag tracking and sentiment analysis",
+      "Dark/light theme with responsive design for mobile access",
+    ],
+    challenges:
+      "Handling API rate limits and different data structures across platforms was complex. I implemented a unified data schema and a queue system (Bull + Redis) to stagger API calls and retry failed requests gracefully.",
+    learned:
+      "I mastered OAuth flows for multiple providers, cron job scheduling with node-cron, real-time updates with WebSockets, and complex data aggregation from disparate sources. I also improved my charting and PDF generation skills.",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
+    featured: true,
+    year: 2025,
+  },
+
+  {
+    id: 8,
+    slug: "weather-dashboard",
+    title: "Weather Dashboard",
+    description:
+      "A real-time weather dashboard that displays current conditions and 5-day forecasts for any city worldwide.",
+    image: weatherApp,
+    category: "Web Development",
+    tech: ["React", "OpenWeather API", "Axios", "CSS Modules"],
+    overview:
+      "This web app fetches live weather data from the OpenWeather API and presents it in an intuitive dashboard with dynamic icons, temperature toggles (°C/°F), and search history.",
+    problem:
+      "Weather data can be overwhelming in raw API format. I wanted to create a clean, user-friendly interface that makes checking the weather quick and visually appealing.",
+    solution:
+      "I built a React app that consumes the OpenWeather API, manages loading/error states gracefully, stores recent searches in localStorage, and displays both current and forecast data in a card-based layout.",
+    features: [
+      "City search with autocomplete",
+      "Current temperature, humidity, wind speed, and conditions",
+      "5-day forecast with 3-hour intervals",
+      "Toggle between Celsius and Fahrenheit",
+      "Recent search history",
+      "Background gradients that change based on weather condition",
+      "Fully responsive design",
+    ],
+    challenges:
+      "Handling API rate limits and asynchronous data fetching while maintaining a smooth UX was tricky. I implemented debounced search and loading skeletons to improve perceived performance.",
+    learned:
+      "I gained experience working with third-party APIs, managing asynchronous state with useEffect and useState, and implementing client-side caching with localStorage.",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
+    year: "2024",
+    featured: true,
+  },
+
+  {
+    id: 9,
+    slug: "task-manager-mobile",
+    title: "Task Manager Mobile App",
+    description:
+      "A cross-platform mobile app for managing daily tasks with reminders, categories, and offline support.",
+    image: taskManager,
+    category: "Mobile Application",
+    tech: [
+      "React Native",
+      "Expo",
+      "SQLite",
+      "React Navigation",
+      "Push Notifications",
+    ],
+    overview:
+      "This app helps users organize tasks by project, set due dates and priorities, receive reminders, and sync data locally when offline.",
+    problem:
+      "Many task apps require constant internet and have cluttered interfaces. I wanted a simple, offline-first mobile experience with native-like performance.",
+    solution:
+      "I built with React Native and Expo, using SQLite for local storage and AsyncStorage for settings. Push notifications are handled via Expo's notification service. The UI follows Material Design guidelines.",
+    features: [
+      "Create, edit, delete, and complete tasks",
+      "Set due dates, priorities (High/Medium/Low), and repeat intervals",
+      "Organize tasks by projects/categories",
+      "Push notifications for upcoming due tasks",
+      "Offline-first: all data stored locally, optional cloud backup",
+      "Search and filter (by date, priority, project)",
+      "Dark/light theme",
+      "Home screen widget (Android)",
+      "Biometric authentication for app lock",
+    ],
+    challenges:
+      "Managing local database schema migrations and syncing with a future cloud backend required careful planning. I implemented a versioned SQLite schema and a sync queue.",
+    learned:
+      "I learned mobile-specific patterns like navigation stacks, native modules, push notification setup, and offline storage strategies. I also tested on both iOS and Android simulators.",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
+    year: "2026",
+    featured: false,
+  },
+  {
+    id: 10,
+    slug: "fitness-tracker",
+    title: "Fitness Tracker App",
+    description:
+      "A full-stack mobile app that logs workouts, tracks progress with charts, and provides personalized exercise recommendations.",
+    image: fitnessTracker,
+    category: "Mobile Application",
+    tech: [
+      "React Native",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Victory Native (charts)",
+      "JWT",
+    ],
+    overview:
+      "This app allows users to record workouts (sets, reps, weight), view historical progress with graphs, set goals, and receive workout suggestions based on past performance.",
+    problem:
+      "Gym-goers often lack structured tracking. I wanted an app that makes logging workouts fast and provides visual feedback on progress over time.",
+    solution:
+      "I built a React Native frontend connected to a Node.js/Express/MongoDB backend. Workouts are stored in the cloud and synced across devices. Charts visualize strength gains and volume trends.",
+    features: [
+      "User authentication (JWT, refresh tokens)",
+      "Exercise library with custom exercise creation",
+      "Log workouts: sets, reps, weight, duration",
+      "Progress charts (1RM, total volume over time)",
+      "Set personal goals (e.g., squat 100kg by date)",
+      "Workout templates and history",
+      "REST API for syncing data",
+      "Offline logging with background sync",
+      "Push reminders for workout days",
+    ],
+    challenges:
+      "Calculating 1-rep max trends from historical logs and displaying them on zoomable charts required efficient data aggregation on the backend and smooth rendering on mobile.",
+    learned:
+      "I improved my backend aggregation skills (MongoDB pipelines for time-series data) and learned charting libraries in React Native. I also implemented secure token refresh flows.",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
+    year: "2020",
+    featured: false,
+  },
+  {
     id: 11,
+    slug: "ecommerce-product-page",
+    title: "E-Commerce Product Page",
+    description:
+      "A fully responsive product page with image gallery, variant selection, cart management, and local storage persistence.",
+
+    image: ecommmerce,
+    category: "Mobile Application",
+    tech: ["React", "Context API", "Tailwind CSS", "Framer Motion"],
+    overview:
+      "This UI component simulates an e-commerce product page, featuring a lightbox gallery, size/color pickers, quantity selector, and a mini-cart with add/remove functionality.",
+    problem:
+      "E-commerce product pages need to be both visually engaging and highly functional. I wanted to build a polished, production-ready component that handles all cart logic.",
+    solution:
+      "I built a React app with Context API for global cart state. The gallery includes thumbnail navigation and a lightbox modal. Cart data persists in localStorage so items survive page refresh.",
+    features: [
+      "Product image gallery with lightbox modal",
+      "Thumbnail carousel",
+      "Variant selection (size, color) with stock validation",
+      "Quantity selector with min/max limits",
+      "Add to cart with micro-interactions (framer motion)",
+      "Mini-cart drawer with item list, quantity updates, and removal",
+      "Cart total calculation",
+      "LocalStorage persistence",
+      "Mobile-first responsive design",
+      "Smooth animations",
+    ],
+    challenges:
+      "Keeping the cart UI in sync across multiple components (product page, mini-cart, header) required careful context design. I used useReducer for complex cart actions (add, remove, update quantity).",
+    learned:
+      "I mastered React Context + useReducer for global state, implemented accessible modal patterns, and improved my animation skills with Framer Motion. I also learned about localStorage hydration.",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
+    year: "2021",
+    featured: false,
+  },
+  {
+    id: 12,
+    slug: "url-shortener",
+    title: "URL Shortener Service",
+    description:
+      "A scalable URL shortening service with custom aliases, click tracking, analytics, and expiration dates.",
+    image: urlShortener,
+    category: "Web Development",
+    tech: ["Node.js", "Express", "PostgreSQL", "Redis", "JWT"],
+    overview:
+      "This backend service converts long URLs into short codes, redirects users, and tracks clicks (referrer, geolocation, device type). It supports user accounts, custom slugs, and link expiration.",
+    problem:
+      "Short links are ubiquitous but often lack analytics. I wanted to build a lightweight, high-performance service with detailed click data and user management.",
+    solution:
+      "I built a Node.js/Express API with PostgreSQL for persistent storage and Redis for caching short links. Redirects are 301/302 with click logging via background jobs. Users can register to manage their links.",
+    features: [
+      "Public URL shortening without login",
+      "User accounts: manage, edit, delete custom links",
+      "Custom aliases (e.g., /my-link)",
+      "Click analytics: total clicks, unique clicks, referrers, countries, devices",
+      "Optional link expiration (date or click limit)",
+      "QR code generation for each short link",
+      "Rate limiting per IP",
+      "API keys for programmatic shortening",
+      "Admin dashboard for system stats",
+    ],
+    challenges:
+      "Ensuring low-latency redirects while logging analytics without blocking was solved by using Redis as a fast lookup cache and queuing click logs to be batch-written to PostgreSQL.",
+    learned:
+      "I learned about caching strategies (Redis), background job queues (Bull), and database indexing for high-read workloads. I also implemented geolocation from IP addresses using a free API.",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
+    year: "2022",
+    featured: false,
+  },
+
+  {
+    id: 13,
     slug: "luxe-beauty-brand",
     title: "Luxe Beauty Brand Identity",
     description:
@@ -439,97 +533,6 @@ const projects = [
     liveDemo: "#",
     year: "2023",
     featured: false,
-  },
-  {
-    id: 3,
-    slug: "codeuni-website",
-    title: "Codeuni University Website",
-    description:
-      "A modern, fully responsive university website showcasing a full spectrum of programming programs at every level — from beginner coding foundations to advanced software engineering degrees.",
-    image: codeuni,
-    category: "Web Development",
-    tech: [
-      "React",
-      "Next.js 14",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Payload CMS",
-      "PostgreSQL",
-      "Vercel",
-    ],
-    overview:
-      "A flagship institutional website for Codeuni — a modern programming university. The platform features program catalogs, faculty profiles, dynamic admissions portals, event calendars, and student dashboards. Designed to convert prospective students while serving current enrollees with course materials and grade access.",
-    problem:
-      "Traditional university websites feel dated, hard to navigate, and fail to attract tech-savvy students. Codeuni needed a digital presence that reflects its cutting-edge curriculum — fast, visual, mobile-first, and built with the very technologies it teaches. The old site had 47% bounce rate and abysmal mobile performance.",
-    solution:
-      "I built a Next.js application with server-side rendering for SEO and instant page loads. The design uses bold typography, dark/light modes, and micro-interactions that signal 'modern tech.' A headless CMS allows admissions staff to update program details without touching code. Program pages feature curriculum previews, career outcomes, tuition tools, and alumni testimonials.",
-    features: [
-      "Hero section with animated code typing effect (rotating through: 'Python', 'React', 'Rust', 'AI')",
-      "Program catalog: 15+ degrees (BSc, MSc, Diploma, Certificates) filterable by level, duration, or format (online/on-campus/hybrid)",
-      "Individual program pages with: curriculum breakdown, learning outcomes, instructors, tuition calculator, application deadline countdown",
-      "Faculty directory with search, research interests, and office hours booking",
-      "Student portal: course enrollment, grade viewer, assignment submission, attendance tracker",
-      "Virtual campus tour (360° photos + embedded walkthrough videos)",
-      "Events & hackathon calendar with RSVP functionality",
-      "Admissions workflow: online application, document upload, status tracking, offer letter generation",
-      "Blog/News section: student spotlights, industry partnerships, research breakthroughs",
-      "Full accessibility (WCAG 2.1 AA compliant) and responsive design (mobile-first)",
-      "Real-time chat widget for prospective student inquiries",
-      "Analytics dashboard for admin: application funnels, page performance, user demographics",
-    ],
-    challenges:
-      "Balancing rich visual design with performance was critical — heavy animations on program cards caused layout shifts. I solved this by using Next.js image optimization and CSS transforms instead of JavaScript-driven animations. Also, the admissions workflow required secure document uploads (PDF, images) with virus scanning, which I implemented using AWS S3 + Lambda checks.",
-    learned:
-      "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
-    github: "https://github.com/gideb/codeUni",
-    liveDemo: "https://codeuni.vercel.app",
-    year: "2023",
-    featured: true,
-  },
-  {
-    id: 4,
-    slug: "klasskoncept-website",
-    title: "Klass Koncepts – Agency Website",
-    description:
-      "A modern, responsive website for Klass Koncepts, designed to establish a strong digital presence through a clean visual identity, elegant layouts, and engaging user experiences.",
-
-    image: klass,
-    category: "Web Development",
-    tech: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vercel"],
-
-    overview:
-      "A modern business website developed for Klass Koncepts, with a focus on creating a professional online presence and communicating the brand's identity. The platform combines a contemporary visual design, intuitive navigation, responsive layouts, and carefully structured content to deliver a seamless browsing experience across desktop, tablet, and mobile devices.",
-
-    problem:
-      "Businesses need more than just an online presence; they need a website that communicates their identity, establishes credibility, and makes it easy for visitors to understand their offerings. Klass Koncepts needed a modern digital platform that could effectively represent its brand while delivering a visually appealing and accessible experience across different devices.",
-
-    solution:
-      "I designed and developed a responsive React application with a clean, modern interface and a distinctive purple-and-white visual identity. Tailwind CSS was used to create consistent styling and responsive layouts, while Framer Motion adds subtle animations and interactive elements. The overall experience prioritizes clear content presentation, intuitive navigation, visual consistency, and accessibility across screen sizes.",
-
-    features: [
-      "Modern hero section with engaging visual elements and clear brand messaging",
-      "Distinctive purple-and-white visual identity consistent with the brand",
-      "Responsive layouts optimized for desktop, tablet, and mobile devices",
-      "Intuitive navigation for easy access to important website sections",
-      "Well-structured content sections for presenting the brand and its offerings",
-      "Modern typography and carefully balanced spacing for improved readability",
-      "Subtle animations and interactive hover effects using Framer Motion",
-      "Reusable React components for maintainable and scalable development",
-      "Consistent styling and responsive utilities using Tailwind CSS",
-      "Optimized layouts and visual elements for a smooth browsing experience",
-      "Deployed and hosted on Vercel",
-    ],
-
-    challenges:
-      "One of the key challenges was maintaining a consistent visual identity while ensuring that the interface remained clean and functional across different screen sizes. Achieving the right balance between visual appeal, typography, spacing, and responsiveness required careful attention to the layout. I also focused on implementing animations in a way that enhanced the user experience without making the interface feel overwhelming.",
-
-    learned:
-      "This project strengthened my experience in building modern React applications using Vite and Tailwind CSS. I gained practical experience in component-based development, responsive design, visual hierarchy, and animation integration with Framer Motion. It also reinforced the importance of translating a brand's identity into a cohesive digital experience while maintaining clean, reusable, and maintainable code.",
-    github: "https://github.com/gideb/klassite.com",
-    liveDemo: "https://gideb/klasskoncept.vercel.app",
-    year: "2024",
-    featured: true,
   },
 ];
 
