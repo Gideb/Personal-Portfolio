@@ -5,16 +5,16 @@ import taskManager from "../assets/images/project/project-task-manager.jpg";
 import weatherApp from "../assets/images/project/project-weather.jpg";
 import urlShortener from "../assets/images/project/project-url-shortener.jpg";
 import uiDesign from "../assets/images/project/project-ui-design.jpg";
-import expenseTracker from "../assets/images/project/project-expense-tracker.jpg";
-import notesApp from "../assets/images/project/project-notes-app.jpg";
-import codeuni from "../assets/images/project/project-codeuni.jpg";
+import expensetracker from "../assets/images/project/project-expensetracker.png";
+import notesapp from "../assets/images/project/project-notesapp.png";
+import codeuni from "../assets/images/project/project-codeuni.png";
 import tutorPortal from "../assets/images/project/project-tutorPortal.png";
 import luxebeauty from "../assets/images/project/project-luxebeauty.jpg";
 import klass from "../assets/images/project/project-klass.jpg";
 
 const projects = [
   {
-    id: 1,
+    id: 12,
     slug: "social-media-dashboard",
     title: "Social Media Analytics Dashboard",
     description:
@@ -52,14 +52,14 @@ const projects = [
       "Handling API rate limits and different data structures across platforms was complex. I implemented a unified data schema and a queue system (Bull + Redis) to stagger API calls and retry failed requests gracefully.",
     learned:
       "I mastered OAuth flows for multiple providers, cron job scheduling with node-cron, real-time updates with WebSockets, and complex data aggregation from disparate sources. I also improved my charting and PDF generation skills.",
-    github: "https://github.com/gideb/social-dashboard",
-    liveDemo: "https://social-dashboard-demo.com",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
     featured: true,
     year: 2025,
   },
 
   {
-    id: 2,
+    id: 15,
     slug: "weather-dashboard",
     title: "Weather Dashboard",
     description:
@@ -86,8 +86,8 @@ const projects = [
       "Handling API rate limits and asynchronous data fetching while maintaining a smooth UX was tricky. I implemented debounced search and loading skeletons to improve perceived performance.",
     learned:
       "I gained experience working with third-party APIs, managing asynchronous state with useEffect and useState, and implementing client-side caching with localStorage.",
-    github: "https://github.com/gideb/weather-dashboard",
-    liveDemo: "https://weather-demo.com",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
     year: "2024",
     featured: true,
   },
@@ -119,18 +119,18 @@ const projects = [
       "Ensuring components were truly reusable without too many props (prop drilling) led me to adopt React Context for theming and a compound component pattern for complex elements like modals.",
     learned:
       "I learned advanced TypeScript patterns, component composition techniques, and how to publish a package to npm. I also improved my understanding of accessibility standards (WCAG).",
-    github: "https://github.com/gideb/ui-design-system",
-    liveDemo: "https://storybook-demo.com",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
     year: "2023",
     featured: false,
   },
   {
-    id: 4,
+    id: 1,
     slug: "expense-tracker-api",
     title: "Expense Tracker API",
     description:
       "A RESTful backend for managing personal finances with user authentication, income/expense tracking, and spending analytics.",
-    image: expenseTracker,
+    image: expensetracker,
     category: "Web Development",
     tech: ["Node.js", "Express", "MongoDB", "JWT", "Mongoose"],
     overview:
@@ -154,17 +154,17 @@ const projects = [
     learned:
       "I deepened my knowledge of authentication/authorization, database indexing, and RESTful API design. I also learned to write unit tests with Jest and Supertest.",
     github: "https://github.com/gideb/expense-tracker-api",
-    liveDemo: "https://expense-api-demo.com",
+    liveDemo: "https://gideb-expensetraacker.vercel.app",
     year: "2026",
     featured: true,
   },
   {
-    id: 5,
+    id: 2,
     slug: "notes-app",
     title: "Collaborative Notes App",
     description:
       "A full-stack MERN application where users can create, edit, organize, and share notes with others in real-time.",
-    image: notesApp,
+    image: notesapp,
     category: "Web Application",
     tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "Tailwind"],
     overview:
@@ -188,10 +188,10 @@ const projects = [
       "Syncing real-time edits without conflicts was the biggest challenge. I implemented Operational Transformation (OT) logic on the backend and used Socket.io rooms for document-specific broadcasting.",
     learned:
       "I learned real-time communication with WebSockets, conflict resolution strategies, and advanced MongoDB queries for tagging and search. I also improved my React state management with Zustand.",
-    github: "https://github.com/gideb/notes-app",
-    liveDemo: "https://notes-demo.com",
-    year: "2023",
-    featured: false,
+    github: "https://github.com/gideb/notesApp",
+    liveDemo: "https://gideb-notebook.vercel.app",
+    year: "2026",
+    featured: true,
   },
   {
     id: 6,
@@ -229,8 +229,8 @@ const projects = [
       "Managing local database schema migrations and syncing with a future cloud backend required careful planning. I implemented a versioned SQLite schema and a sync queue.",
     learned:
       "I learned mobile-specific patterns like navigation stacks, native modules, push notification setup, and offline storage strategies. I also tested on both iOS and Android simulators.",
-    github: "https://github.com/gideb/task-manager-mobile",
-    liveDemo: "https://expo.dev/@gideb/task-manager",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
     year: "2026",
     featured: false,
   },
@@ -271,8 +271,8 @@ const projects = [
       "Calculating 1-rep max trends from historical logs and displaying them on zoomable charts required efficient data aggregation on the backend and smooth rendering on mobile.",
     learned:
       "I improved my backend aggregation skills (MongoDB pipelines for time-series data) and learned charting libraries in React Native. I also implemented secure token refresh flows.",
-    github: "https://github.com/gideb/fitness-tracker",
-    liveDemo: "https://fitness-demo.com",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
     year: "2020",
     featured: false,
   },
@@ -308,8 +308,8 @@ const projects = [
       "Keeping the cart UI in sync across multiple components (product page, mini-cart, header) required careful context design. I used useReducer for complex cart actions (add, remove, update quantity).",
     learned:
       "I mastered React Context + useReducer for global state, implemented accessible modal patterns, and improved my animation skills with Framer Motion. I also learned about localStorage hydration.",
-    github: "https://github.com/gideb/ecommerce-product-page",
-    liveDemo: "https://product-demo.com",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
     year: "2021",
     featured: false,
   },
@@ -343,8 +343,8 @@ const projects = [
       "Ensuring low-latency redirects while logging analytics without blocking was solved by using Redis as a fast lookup cache and queuing click logs to be batch-written to PostgreSQL.",
     learned:
       "I learned about caching strategies (Redis), background job queues (Bull), and database indexing for high-read workloads. I also implemented geolocation from IP addresses using a free API.",
-    github: "https://github.com/gideb/url-shortener",
-    liveDemo: "https://url-demo.com",
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
     year: "2022",
     featured: false,
   },
@@ -386,9 +386,9 @@ const projects = [
       "Structuring 8 unique syllabi without repeating content was tough. I created a central data model (JSON) that stores all modules for each program, then mapped it dynamically. Ensuring the 'OPEN PORTAL' animations didn't lag on lower-end devices required debouncing state changes.",
     learned:
       "I improved my skills in component composition (reusing a single 'OutlineModal' for 8 different data sets), managing complex state in React, and generating PDFs client-side using jsPDF. I also learned how to design for scanability—students read outlines in 30 seconds or less.",
-    github: "https://github.com/gideb/tutor-portal",
-    liveDemo: "https://tutor-portal-demo.com",
-    year: "2024",
+    github: "https://github.com/gideb/tutorportal",
+    liveDemo: "#",
+    year: "2025",
     featured: false,
   },
   {
@@ -435,13 +435,13 @@ const projects = [
       "Brand guidelines PDF + Master asset folder (2.4 GB) — fonts, logos in 5 formats (AI, EPS, SVG, PNG, JPG), patterns, mockups, social templates",
     testimonial:
       "Our sales increased 210% after the rebrand. For the first time, customers tell us our packaging 'looks like it costs $200.' The guidelines made onboarding our printers seamless.",
-    github: "https://www.behance.net/gallery/luxe-beauty-identity",
-    liveDemo: "https://luxebeauty-brand-portfolio.com",
-    year: "2021",
-    featured: true,
+    github: "https://github.com/gideb/#",
+    liveDemo: "#",
+    year: "2023",
+    featured: false,
   },
   {
-    id: 12,
+    id: 3,
     slug: "codeuni-website",
     title: "Codeuni University Website",
     description:
@@ -482,47 +482,53 @@ const projects = [
       "Balancing rich visual design with performance was critical — heavy animations on program cards caused layout shifts. I solved this by using Next.js image optimization and CSS transforms instead of JavaScript-driven animations. Also, the admissions workflow required secure document uploads (PDF, images) with virus scanning, which I implemented using AWS S3 + Lambda checks.",
     learned:
       "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
-    github: "https://github.com/gideb/codeuni-website",
-    liveDemo: "https://codeuni-university-demo.com",
+    github: "https://github.com/gideb/codeUni",
+    liveDemo: "https://codeuni.vercel.app",
     year: "2023",
-    featured: false,
+    featured: true,
   },
   {
-    id: 13,
+    id: 4,
     slug: "klasskoncept-website",
-    title: "Klass Koncept Agency Website",
+    title: "Klass Koncepts – Agency Website",
     description:
-      "A modern, fully responsive Agency website showcasing a full spectrum of programming programs at every level — from beginner coding foundations to advanced software engineering degrees.",
+      "A modern, responsive website for Klass Koncepts, designed to establish a strong digital presence through a clean visual identity, elegant layouts, and engaging user experiences.",
+
     image: klass,
     category: "Web Development",
-    tech: ["React", "Next.js 14", "Tailwind CSS", "Framer Motion", "Vercel"],
+    tech: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vercel"],
+
     overview:
-      "A flagship institutional website for Codeuni — a modern programming university. The platform features program catalogs, faculty profiles, dynamic admissions portals, event calendars, and student dashboards. Designed to convert prospective students while serving current enrollees with course materials and grade access.",
+      "A modern business website developed for Klass Koncepts, with a focus on creating a professional online presence and communicating the brand's identity. The platform combines a contemporary visual design, intuitive navigation, responsive layouts, and carefully structured content to deliver a seamless browsing experience across desktop, tablet, and mobile devices.",
+
     problem:
-      "Traditional university websites feel dated, hard to navigate, and fail to attract tech-savvy students. Codeuni needed a digital presence that reflects its cutting-edge curriculum — fast, visual, mobile-first, and built with the very technologies it teaches. The old site had 47% bounce rate and abysmal mobile performance.",
+      "Businesses need more than just an online presence; they need a website that communicates their identity, establishes credibility, and makes it easy for visitors to understand their offerings. Klass Koncepts needed a modern digital platform that could effectively represent its brand while delivering a visually appealing and accessible experience across different devices.",
+
     solution:
-      "I built a Next.js application with server-side rendering for SEO and instant page loads. The design uses bold typography, dark/light modes, and micro-interactions that signal 'modern tech.' A headless CMS allows admissions staff to update program details without touching code. Program pages feature curriculum previews, career outcomes, tuition tools, and alumni testimonials.",
+      "I designed and developed a responsive React application with a clean, modern interface and a distinctive purple-and-white visual identity. Tailwind CSS was used to create consistent styling and responsive layouts, while Framer Motion adds subtle animations and interactive elements. The overall experience prioritizes clear content presentation, intuitive navigation, visual consistency, and accessibility across screen sizes.",
+
     features: [
-      "Hero section with animated code typing effect (rotating through: 'Python', 'React', 'Rust', 'AI')",
-      "Program catalog: 15+ degrees (BSc, MSc, Diploma, Certificates) filterable by level, duration, or format (online/on-campus/hybrid)",
-      "Individual program pages with: curriculum breakdown, learning outcomes, instructors, tuition calculator, application deadline countdown",
-      "Faculty directory with search, research interests, and office hours booking",
-      "Student portal: course enrollment, grade viewer, assignment submission, attendance tracker",
-      "Virtual campus tour (360° photos + embedded walkthrough videos)",
-      "Events & hackathon calendar with RSVP functionality",
-      "Admissions workflow: online application, document upload, status tracking, offer letter generation",
-      "Blog/News section: student spotlights, industry partnerships, research breakthroughs",
-      "Full accessibility (WCAG 2.1 AA compliant) and responsive design (mobile-first)",
-      "Real-time chat widget for prospective student inquiries",
-      "Analytics dashboard for admin: application funnels, page performance, user demographics",
+      "Modern hero section with engaging visual elements and clear brand messaging",
+      "Distinctive purple-and-white visual identity consistent with the brand",
+      "Responsive layouts optimized for desktop, tablet, and mobile devices",
+      "Intuitive navigation for easy access to important website sections",
+      "Well-structured content sections for presenting the brand and its offerings",
+      "Modern typography and carefully balanced spacing for improved readability",
+      "Subtle animations and interactive hover effects using Framer Motion",
+      "Reusable React components for maintainable and scalable development",
+      "Consistent styling and responsive utilities using Tailwind CSS",
+      "Optimized layouts and visual elements for a smooth browsing experience",
+      "Deployed and hosted on Vercel",
     ],
+
     challenges:
-      "Balancing rich visual design with performance was critical — heavy animations on program cards caused layout shifts. I solved this by using Next.js image optimization and CSS transforms instead of JavaScript-driven animations. Also, the admissions workflow required secure document uploads (PDF, images) with virus scanning, which I implemented using AWS S3 + Lambda checks.",
+      "One of the key challenges was maintaining a consistent visual identity while ensuring that the interface remained clean and functional across different screen sizes. Achieving the right balance between visual appeal, typography, spacing, and responsiveness required careful attention to the layout. I also focused on implementing animations in a way that enhanced the user experience without making the interface feel overwhelming.",
+
     learned:
-      "I gained deep experience with headless CMS architectures (Payload), role-based access control (student, faculty, admin, prospect), and building accessible mega-menus for large program catalogs. I also learned SEO strategies for academic institutions — schema markup for 'Course,' 'EducationalOrganization,' and 'Event' improved search visibility by 140%.",
-    github: "https://github.com/gideb/codeuni-website",
-    liveDemo: "https://codeuni-university-demo.com",
-    year: "2023",
+      "This project strengthened my experience in building modern React applications using Vite and Tailwind CSS. I gained practical experience in component-based development, responsive design, visual hierarchy, and animation integration with Framer Motion. It also reinforced the importance of translating a brand's identity into a cohesive digital experience while maintaining clean, reusable, and maintainable code.",
+    github: "https://github.com/gideb/klassite.com",
+    liveDemo: "https://gideb/klasskoncept.vercel.app",
+    year: "2024",
     featured: true,
   },
 ];

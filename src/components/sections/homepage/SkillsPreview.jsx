@@ -204,10 +204,8 @@ const SkillsPreview = () => {
               "MongoDB",
               "PostgreSQL",
               "Firebase",
-              "Vue.js",
+              "Supabase",
               "SASS",
-              "Webpack",
-              "Jest",
               "Figma",
             ].map((tool, index) => (
               <motion.span
@@ -256,7 +254,7 @@ const SkillsPreview = () => {
               "DaVinci Resolve",
               "Premiere Pro",
               "After Effects",
-              "Audition",
+              "Capcut",
             ].map((tool, index) => (
               <motion.span
                 key={index}
